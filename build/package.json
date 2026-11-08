@@ -1,0 +1,13 @@
+{
+  "name": "cheonjamun-app-build",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "천자문.xlsx → data.js 변환 스크립트",
+  "scripts": {
+    "build": "node parse-xlsx.mjs"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

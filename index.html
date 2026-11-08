@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+<meta name="theme-color" content="#1f3a5f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="천자문 공부" />
+<title>천자문 공부 — 1000자</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+
+  <header class="topbar">
+    <div class="topbar-title">
+      <span class="logo">千</span>
+      <div>
+        <h1>천자문 공부</h1>
+        <p id="topbar-sub">천자문 1000자 · <span id="load-status">불러오는 중…</span></p>
+      </div>
+    </div>
+    <button id="btn-info" class="icon-btn" aria-label="정보">⋯</button>
+  </header>
+
+  <main id="views">
+
+    <!-- ============ 카드 학습 ============ -->
+    <section class="view" id="view-card" data-view="card">
+      <div class="seg" id="card-deck-seg" role="tablist">
+        <button class="seg-btn active" data-deck="word">천자문 구절</button>
+        <button class="seg-btn" data-deck="char">개별 한자</button>
+        <button class="seg-btn" data-deck="all">전체</button>
+      </div>
+
+      <div class="rangebar" id="card-rangebar">
+        <label for="card-range">범위</label>
+        <select id="card-range">
+          <option value="all">전체</option>
+        </select>
+      </div>
+
+      <div class="deckbar">
+        <span id="card-progress-text">0 / 0</span>
+        <label class="switch">
+          <input type="checkbox" id="card-shuffle" />
+          <span>섞기</span>
+        </label>
+      </div>
+
+      <div class="card-stage" id="card-stage">
+        <div class="flip-card" id="flip-card">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="card-type" id="card-front-type"></div>
+              <div class="card-hanja" id="card-front-hanja"></div>
+              <div class="card-hint">탭해서 뜻 보기</div>
+            </div>
+            <div class="flip-face flip-back">
+              <div class="card-type" id="card-back-type"></div>
+              <div class="card-hanja small" id="card-back-hanja"></div>
+              <div class="card-reading" id="card-back-reading"></div>
+              <div class="card-meaning" id="card-back-meaning"></div>
+              <div class="card-chars" id="card-back-chars"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-progress-bar"><div id="card-progress-fill"></div></div>
+
+      <div class="card-controls">
+        <button class="ctrl" id="btn-prev" aria-label="이전">◀</button>
+        <button class="ctrl primary" id="btn-flip">뒤집기</button>
+        <button class="ctrl" id="btn-next" aria-label="다음">▶</button>
+      </div>
+      <div class="card-meta"><span id="card-known-count"></span></div>
+    </section>
+
+    <!-- ============ 퀴즈 ============ -->
+    <section class="view hidden" id="view-quiz" data-view="quiz">
+      <div id="quiz-setup">
+        <h2 class="section-h">퀴즈 설정</h2>
+
+        <p class="field-label">문제 유형</p>
+        <div class="seg wrap" id="quiz-type-seg">
+          <button class="seg-btn active" data-qtype="hanja2sound">한자 → 음</button>
+          <button class="seg-btn" data-qtype="hanja2mean">한자 → 뜻</button>
+          <button class="seg-btn" data-qtype="sound2hanja">음 → 한자</button>
+        </div>
+
+        <p class="field-label">출제 범위</p>
+        <div class="seg wrap" id="quiz-scope-seg">
+          <button class="seg-btn active" data-scope="classic">천자문 구절</button>
+          <button class="seg-btn" data-scope="char">개별 한자</button>
+          <button class="seg-btn" data-scope="all">전체</button>
+        </div>
+
+        <div class="rangebar" id="quiz-rangebar">
+          <label for="quiz-range">범위</label>
+          <select id="quiz-range">
+            <option value="all">전체</option>
+          </select>
+        </div>
+
+        <p class="field-label">문제 수</p>
+        <div class="seg wrap" id="quiz-count-seg">
+          <button class="seg-btn" data-count="10">10문제</button>
+          <button class="seg-btn active" data-count="20">20문제</button>
+          <button class="seg-btn" data-count="50">50문제</button>
+          <button class="seg-btn" data-count="100">100문제</button>
+          <button class="seg-btn" data-count="0">전체</button>
+        </div>
+
+        <p class="field-label">정답률 순서</p>
+        <div class="seg" id="quiz-order-seg">
+          <button class="seg-btn active" data-order="random">무작위</button>
+          <button class="seg-btn" data-order="weak">자주 틀린 것</button>
+        </div>
+
+        <button class="big-btn" id="btn-start-quiz">퀴즈 시작</button>
+        <div class="quiz-weak-info" id="quiz-weak-info"></div>
+      </div>
+
+      <div id="quiz-play" class="hidden">
+        <div class="quiz-top">
+          <span id="quiz-counter">1 / 10</span>
+          <span id="quiz-score">0점</span>
+        </div>
+        <div class="quiz-progress"><div id="quiz-progress-fill"></div></div>
+
+        <div class="quiz-q">
+          <p class="quiz-prompt" id="quiz-prompt">다음 한자의 음은?</p>
+          <div class="quiz-hanja" id="quiz-question"></div>
+        </div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <button class="big-btn" id="btn-quiz-next" disabled>다음</button>
+      </div>
+
+      <div id="quiz-result" class="hidden">
+        <div class="result-emoji" id="result-emoji">🎉</div>
+        <h2 class="result-title" id="result-title"></h2>
+        <p class="result-score" id="result-score"></p>
+        <div class="result-wrong" id="result-wrong"></div>
+        <div class="result-actions">
+          <button class="big-btn" id="btn-quiz-again">다시 풀기</button>
+          <button class="ghost-btn" id="btn-review-wrong">틀린 것만 복습</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 목록 ============ -->
+    <section class="view hidden" id="view-list" data-view="list">
+      <div class="searchbar">
+        <input type="search" id="list-search" placeholder="한자 · 음 · 뜻 검색" />
+      </div>
+      <div class="seg wrap" id="list-filter-seg">
+        <button class="seg-btn active" data-filter="all">전체</button>
+        <button class="seg-btn" data-filter="classic">천자문 구절</button>
+        <button class="seg-btn" data-filter="char">개별 한자</button>
+      </div>
+      <div class="list-count" id="list-count"></div>
+      <div id="list-body"></div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar">
+    <button class="tab active" data-tab="card"><span class="tab-ic">📇</span>카드</button>
+    <button class="tab" data-tab="quiz"><span class="tab-ic">❓</span>퀴즈</button>
+    <button class="tab" data-tab="list"><span class="tab-ic">📖</span>목록</button>
+  </nav>
+
+</div>
+
+<!-- 정보/설정 시트 -->
+<div class="sheet-backdrop hidden" id="sheet-backdrop">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <h2>정보</h2>
+    <ul class="info-list">
+      <li><span>자료</span><b id="info-source">—</b></li>
+      <li><span>구절</span><b id="info-entries">—</b></li>
+      <li><span>고유 한자</span><b id="info-chars">—</b></li>
+      <li><span>전체 글자</span><b id="info-total">—</b></li>
+      <li><span>생성일</span><b id="info-date">—</b></li>
+    </ul>
+    <h3>학습 기록</h3>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num" id="stat-known">0</div><div class="stat-lbl">학습한 카드</div></div>
+      <div class="stat"><div class="stat-num" id="stat-quiz">0</div><div class="stat-lbl">푼 문제</div></div>
+      <div class="stat"><div class="stat-num" id="stat-acc">0%</div><div class="stat-lbl">누적 정답률</div></div>
+    </div>
+    <button class="ghost-btn danger" id="btn-reset">학습 기록 초기화</button>
+    <p class="sheet-note">기록은 이 기기에만 저장됩니다.</p>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
