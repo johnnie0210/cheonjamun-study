@@ -58,6 +58,8 @@ GitHub 저장소에 `천자문.xlsx` 파일을 올리거나 교체하면, GitHub
 > 워크플로가 실패하면 **Actions** 탭에서 로그를 확인해 주세요.
 > 저장소 **Settings → Actions → General → Workflow permissions** 가
 > **Read and write permissions** 인지도 확인하면 좋습니다.
+>
+> 저장소가 공개(public)라서 `천자문.xlsx`와 `data.js` 내용도 누구나 볼 수 있습니다.
 
 ## PC에서 직접 반영하기
 
