@@ -41,6 +41,20 @@
     toastTimer = setTimeout(() => t.classList.add('hidden'), 1800);
   }
 
+  /* ================= 획순 ================= */
+  const STROKE_BASE = 'https://www.hanziwu.com/ko/search?q=';
+  const STROKE_MISSING = new Set('凊磻寔俶輶煒竝璿');
+
+  function openStrokeOrder(hanja) {
+    if (!hanja) return;
+    if (hanja.length === 1 && STROKE_MISSING.has(hanja)) {
+      toast('이 글자는 한자우에 획순 데이터가 없습니다.');
+      return;
+    }
+    const url = STROKE_BASE + encodeURIComponent(hanja);
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
   /* ================= 카드 아이템 구성 ================= */
   const entryById = new Map(DATA.entries.map((e) => [e.id, e]));
 
@@ -191,10 +205,13 @@
       $('card-back-meaning').className = 'card-meaning';
       $('card-back-meaning').textContent = '';
       $('card-back-chars').innerHTML = '';
+      $('btn-stroke').disabled = true;
       $('card-progress-text').textContent = '0 / 0';
       $('card-progress-fill').style.width = '0%';
       return;
     }
+    $('btn-stroke').disabled = false;
+    $('btn-stroke').setAttribute('aria-label', c.hanja + ' 획순 보기 (새 탭)');
     $('card-front-type').textContent = c.typeLabel;
     $('card-front-hanja').textContent = c.hanja;
     $('card-back-type').textContent = c.typeLabel;
@@ -255,6 +272,11 @@
   }
 
   $('flip-card').addEventListener('click', flipCard);
+  $('btn-stroke').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const c = currentCard();
+    if (c) openStrokeOrder(c.hanja);
+  });
   $('btn-flip').addEventListener('click', flipCard);
   $('btn-next').addEventListener('click', nextCard);
   $('btn-prev').addEventListener('click', prevCard);
