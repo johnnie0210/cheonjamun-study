@@ -53,6 +53,7 @@
       hanja: e.hanja,
       reading: e.reading,
       meaning: e.meaning,
+      phraseMeaning: e.phraseMeaning || '',
       typeLabel: DATA.typeLabel[e.type] || '천자문 구절',
       chars: e.chars,
       no: e.no || e.id,
@@ -186,6 +187,8 @@
       $('card-front-hanja').textContent = '—';
       $('card-front-type').textContent = '';
       $('card-back-reading').textContent = '';
+      $('card-back-meaning-label').textContent = '';
+      $('card-back-meaning').className = 'card-meaning';
       $('card-back-meaning').textContent = '';
       $('card-back-chars').innerHTML = '';
       $('card-progress-text').textContent = '0 / 0';
@@ -197,7 +200,12 @@
     $('card-back-type').textContent = c.typeLabel;
     $('card-back-hanja').textContent = c.hanja;
     $('card-back-reading').textContent = c.reading || '';
-    $('card-back-meaning').textContent = c.meaning || '';
+
+    const isWord = c.kind === 'word';
+    const meaningText = isWord ? (c.phraseMeaning || '') : (c.meaning || '');
+    $('card-back-meaning-label').textContent = meaningText ? (isWord ? '구절 뜻' : '뜻') : '';
+    $('card-back-meaning').className = 'card-meaning' + (isWord ? ' phrase' : '');
+    $('card-back-meaning').textContent = meaningText;
 
     const cc = $('card-back-chars');
     if (c.kind === 'char' && c.usedWords && c.usedWords.length) {
@@ -558,7 +566,7 @@
 
     if (q) {
       items = items.filter((it) => {
-        const text = [it.hanja, it.reading, it.meaning, (it.usedWords || []).join(' ')].join(' ');
+        const text = [it.hanja, it.reading, it.meaning, it.phraseMeaning, (it.usedWords || []).join(' ')].join(' ');
         return text.toLowerCase().includes(q);
       });
     }
@@ -592,7 +600,7 @@
           (it.reading ? '<div class="entry-reading">' + esc(it.reading) + '</div>' : '') + '</div>' +
           '<span class="entry-badge">' + esc(it.typeLabel || '') + '</span>' +
         '</div>' +
-        (it.meaning ? '<div class="entry-meaning">' + esc(it.meaning) + '</div>' : '') +
+        (it.phraseMeaning ? '<div class="entry-meaning">' + esc(it.phraseMeaning) + '</div>' : '') +
         (chars ? '<div class="entry-chars">' + chars + '</div>' : '') +
         '</div>';
     }).join('') || '<p class="list-count">결과가 없습니다.</p>';
@@ -609,6 +617,7 @@
   /* ================= 정보 시트 ================= */
   $('btn-info').addEventListener('click', () => {
     $('info-source').textContent = DATA.source || '—';
+    $('info-phrase-source').textContent = DATA.phraseSource || '—';
     $('info-entries').textContent = (DATA.counts.entries || DATA.entries.length) + '개';
     $('info-chars').textContent = (DATA.counts.characters || DATA.characters.length) + '자';
     $('info-total').textContent = (DATA.counts.totalChars || DATA.counts.characters || DATA.characters.length) + '자';

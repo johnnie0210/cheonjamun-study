@@ -8,6 +8,10 @@ node_modules/
 
 # 자동 반영용 원본만 저장소에 포함
 !천자문.xlsx
+!천자문_구절.xlsx
+
+# Excel 임시 잠금 파일
+~$*.xlsx
 
 # OS
 Thumbs.db

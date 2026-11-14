@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "천자문.xlsx → data.js 변환 스크립트",
+  "description": "천자문.xlsx + 천자문_구절.xlsx → data.js 변환 스크립트",
   "scripts": {
     "build": "node parse-xlsx.mjs"
   },

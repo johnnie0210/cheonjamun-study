@@ -1,13 +1,15 @@
-// 자동 생성 파일 — 천자문.xlsx 에서 파싱됨
+// 자동 생성 파일 — 천자문.xlsx + 천자문_구절.xlsx 에서 파싱됨
 // 재생성: cd build && node parse-xlsx.mjs
 window.CHEONJAMUN_DATA = {
   "source": "천자문.xlsx",
-  "generated": "2026-11-08T11:49:25.727Z",
+  "phraseSource": "천자문_구절.xlsx",
+  "generated": "2026-11-14T04:02:22.252Z",
   "counts": {
     "entries": 250,
     "characters": 1000,
     "classics": 250,
-    "totalChars": 1000
+    "totalChars": 1000,
+    "phraseMeanings": 250
   },
   "typeLabel": {
     "classic": "천자문 구절"
@@ -21,6 +23,7 @@ window.CHEONJAMUN_DATA = {
       "end": 4,
       "hanja": "天地玄黃",
       "meaning": "",
+      "phraseMeaning": "하늘은 위에 있으니 그 빛이 검고, 땅은 아래 있으니 그 빛이 누르다.",
       "reading": "천지현황",
       "chars": [
         {
@@ -53,6 +56,7 @@ window.CHEONJAMUN_DATA = {
       "end": 8,
       "hanja": "宇宙洪荒",
       "meaning": "",
+      "phraseMeaning": "하늘과 땅 사이는 넓고 커서 끝이 없다.",
       "reading": "우주홍황",
       "chars": [
         {
@@ -85,6 +89,7 @@ window.CHEONJAMUN_DATA = {
       "end": 12,
       "hanja": "日月盈昃",
       "meaning": "",
+      "phraseMeaning": "해는 서쪽으로 기울고 달도 차면 점차 이지러진다.",
       "reading": "일월영측",
       "chars": [
         {
@@ -117,6 +122,7 @@ window.CHEONJAMUN_DATA = {
       "end": 16,
       "hanja": "辰宿列張",
       "meaning": "",
+      "phraseMeaning": "별 자리가 하늘에 넓게 벌려져 있다.",
       "reading": "진숙열장",
       "chars": [
         {
@@ -149,6 +155,7 @@ window.CHEONJAMUN_DATA = {
       "end": 20,
       "hanja": "寒來暑往",
       "meaning": "",
+      "phraseMeaning": "찬 것이 오면 더운 것이 가고, 더운 것이 오면 찬 것이 간다.",
       "reading": "한래서왕",
       "chars": [
         {
@@ -181,6 +188,7 @@ window.CHEONJAMUN_DATA = {
       "end": 24,
       "hanja": "秋收冬藏",
       "meaning": "",
+      "phraseMeaning": "가을에 곡식을 거두고 겨울이 오면 그것을 저장 한다.",
       "reading": "추수동장",
       "chars": [
         {
@@ -213,6 +221,7 @@ window.CHEONJAMUN_DATA = {
       "end": 28,
       "hanja": "閏餘成歲",
       "meaning": "",
+      "phraseMeaning": "일년 이십사절기의 나머지 시각을 모아 윤달로 하여 한 해를 이룬다.",
       "reading": "윤여성세",
       "chars": [
         {
@@ -245,6 +254,7 @@ window.CHEONJAMUN_DATA = {
       "end": 32,
       "hanja": "律呂調陽",
       "meaning": "",
+      "phraseMeaning": "천지간의 양기를 고르게 하니, 즉 율은 양이요, 여는 음임.",
       "reading": "률려조양",
       "chars": [
         {
@@ -277,6 +287,7 @@ window.CHEONJAMUN_DATA = {
       "end": 36,
       "hanja": "雲騰致雨",
       "meaning": "",
+      "phraseMeaning": "수증기가 올라가서 구름이 되고 냉기를 만나 비가 된다.",
       "reading": "운등치우",
       "chars": [
         {
@@ -309,6 +320,7 @@ window.CHEONJAMUN_DATA = {
       "end": 40,
       "hanja": "露結為霜",
       "meaning": "",
+      "phraseMeaning": "이슬이 맺어 서리가 되니, 밤기운이 풀잎에 물방울처럼 이슬을 이룬다.",
       "reading": "로결위상",
       "chars": [
         {
@@ -341,6 +353,7 @@ window.CHEONJAMUN_DATA = {
       "end": 44,
       "hanja": "金生麗水",
       "meaning": "",
+      "phraseMeaning": "금은 여수에서 난다. (여수는 중국의 지명)",
       "reading": "금생려수",
       "chars": [
         {
@@ -373,6 +386,7 @@ window.CHEONJAMUN_DATA = {
       "end": 48,
       "hanja": "玉出崑岡",
       "meaning": "",
+      "phraseMeaning": "옥은 곤강에서 난다. (곤강은 중국의 산 이름)",
       "reading": "옥출곤강",
       "chars": [
         {
@@ -405,6 +419,7 @@ window.CHEONJAMUN_DATA = {
       "end": 52,
       "hanja": "劍號巨闕",
       "meaning": "",
+      "phraseMeaning": "거궐은 칼이름이고 구야자가 만든 보검이다. (조나라의 국보)",
       "reading": "검호거궐",
       "chars": [
         {
@@ -437,6 +452,7 @@ window.CHEONJAMUN_DATA = {
       "end": 56,
       "hanja": "珠稱夜光",
       "meaning": "",
+      "phraseMeaning": "구슬의 빛이 영롱하므로 야광이라 칭했다.",
       "reading": "주칭야광",
       "chars": [
         {
@@ -469,6 +485,7 @@ window.CHEONJAMUN_DATA = {
       "end": 60,
       "hanja": "果珍李柰",
       "meaning": "",
+      "phraseMeaning": "과실 중에 오얏(자두)과 능금이 진미(珍味)이다.",
       "reading": "과진리내",
       "chars": [
         {
@@ -501,6 +518,7 @@ window.CHEONJAMUN_DATA = {
       "end": 64,
       "hanja": "菜重芥姜",
       "meaning": "",
+      "phraseMeaning": "나물은 겨자와 생강이 중요하다.",
       "reading": "채중개강",
       "chars": [
         {
@@ -533,6 +551,7 @@ window.CHEONJAMUN_DATA = {
       "end": 68,
       "hanja": "海咸河淡",
       "meaning": "",
+      "phraseMeaning": "바다 물은 짜고 민물은 맛이 담백 하다.",
       "reading": "해함하담",
       "chars": [
         {
@@ -565,6 +584,7 @@ window.CHEONJAMUN_DATA = {
       "end": 72,
       "hanja": "鱗潛羽翔",
       "meaning": "",
+      "phraseMeaning": "비늘 있는 고기는 물 속에 잠기고, 날개 있는 새는 공중에 난다.",
       "reading": "린잠우상",
       "chars": [
         {
@@ -597,6 +617,7 @@ window.CHEONJAMUN_DATA = {
       "end": 76,
       "hanja": "龍師火帝",
       "meaning": "",
+      "phraseMeaning": "복희씨는 용으로써 벼슬을 기록하고, 신농씨는 불로써 기록하였다.",
       "reading": "룡사화제",
       "chars": [
         {
@@ -629,6 +650,7 @@ window.CHEONJAMUN_DATA = {
       "end": 80,
       "hanja": "鳥官人皇",
       "meaning": "",
+      "phraseMeaning": "소호(少昊)는 새로써 벼슬을 기록하고, 황제는 인문을 갖추었으므로 인황이라 했다.",
       "reading": "조관인황",
       "chars": [
         {
@@ -661,6 +683,7 @@ window.CHEONJAMUN_DATA = {
       "end": 84,
       "hanja": "始制文字",
       "meaning": "",
+      "phraseMeaning": "복희씨의 신하 창힐이 새의 발자취를 보고 글자를 처음 만들었다.",
       "reading": "시제문자",
       "chars": [
         {
@@ -693,6 +716,7 @@ window.CHEONJAMUN_DATA = {
       "end": 88,
       "hanja": "乃服衣裳",
       "meaning": "",
+      "phraseMeaning": "이에 의복을 입게 하니 황제가 의관을 지어 등분을 분별하고 위의를 엄숙케 했다.",
       "reading": "내복의상",
       "chars": [
         {
@@ -725,6 +749,7 @@ window.CHEONJAMUN_DATA = {
       "end": 92,
       "hanja": "推位讓國",
       "meaning": "",
+      "phraseMeaning": "벼슬을 미루고 나라를 사양하니 요임금이 순임금에게 전위(傳位)했다.",
       "reading": "추위양국",
       "chars": [
         {
@@ -757,6 +782,7 @@ window.CHEONJAMUN_DATA = {
       "end": 96,
       "hanja": "有虞陶唐",
       "meaning": "",
+      "phraseMeaning": "유우(有虞)는 순(舜)임금 이요, 도당(陶唐)은 요(堯)임금 이다.",
       "reading": "유우도당",
       "chars": [
         {
@@ -789,6 +815,7 @@ window.CHEONJAMUN_DATA = {
       "end": 100,
       "hanja": "弔民伐罪",
       "meaning": "",
+      "phraseMeaning": "불쌍한 백성은 돕고, 죄지은 백성은 벌주었다.",
       "reading": "조민벌죄",
       "chars": [
         {
@@ -821,6 +848,7 @@ window.CHEONJAMUN_DATA = {
       "end": 104,
       "hanja": "周發殷湯",
       "meaning": "",
+      "phraseMeaning": "주발은 주나라 무왕(武王)의 이름이고, 은탕은 은나라 탕왕(湯王)의 칭호이다.",
       "reading": "주발은탕",
       "chars": [
         {
@@ -853,6 +881,7 @@ window.CHEONJAMUN_DATA = {
       "end": 108,
       "hanja": "坐朝問道",
       "meaning": "",
+      "phraseMeaning": "천하를 통일하여 왕위에 앉아, 나라 다스리는 법을 묻는다.",
       "reading": "좌조문도",
       "chars": [
         {
@@ -885,6 +914,7 @@ window.CHEONJAMUN_DATA = {
       "end": 112,
       "hanja": "垂拱平章",
       "meaning": "",
+      "phraseMeaning": "밝고 평화스럽게 다스리는 길을 임금이 겸손히 생각함을 말한다.",
       "reading": "수공평장",
       "chars": [
         {
@@ -917,6 +947,7 @@ window.CHEONJAMUN_DATA = {
       "end": 116,
       "hanja": "愛育黎首",
       "meaning": "",
+      "phraseMeaning": "명군(明君)이 천하를 다스림에 있어서 黎首(백성)를 사랑하고 양육하면",
       "reading": "애육려수",
       "chars": [
         {
@@ -949,6 +980,7 @@ window.CHEONJAMUN_DATA = {
       "end": 120,
       "hanja": "臣伏戎羌",
       "meaning": "",
+      "phraseMeaning": "그 덕에 융과 강(오랑캐들)도 항복하여 신민(臣民)이 된다.",
       "reading": "신복융강",
       "chars": [
         {
@@ -981,6 +1013,7 @@ window.CHEONJAMUN_DATA = {
       "end": 124,
       "hanja": "遐邇一體",
       "meaning": "",
+      "phraseMeaning": "멀고 가까운 나라가 전부 그 덕망에 귀순하여 일체가 될 수 있다.",
       "reading": "하이일체",
       "chars": [
         {
@@ -1013,6 +1046,7 @@ window.CHEONJAMUN_DATA = {
       "end": 128,
       "hanja": "率賓歸王",
       "meaning": "",
+      "phraseMeaning": "백성을 거느리고 복종하여 왕에게 돌아오니 덕을 입어 복종치 않음이 없음이다.",
       "reading": "솔빈귀왕",
       "chars": [
         {
@@ -1045,6 +1079,7 @@ window.CHEONJAMUN_DATA = {
       "end": 132,
       "hanja": "鳴鳳在竹",
       "meaning": "",
+      "phraseMeaning": "명군,성현이 나타나면 봉이 운다는 말과 같이 덕망이 미치는 곳마다 봉이 대나무 위에서 울 것이다.",
       "reading": "명봉재죽",
       "chars": [
         {
@@ -1077,6 +1112,7 @@ window.CHEONJAMUN_DATA = {
       "end": 136,
       "hanja": "白駒食場",
       "meaning": "",
+      "phraseMeaning": "흰 망아지도 감화(感化)되어 사람을 따르며 마당 풀을 뜯어먹게 한다.",
       "reading": "백구식장",
       "chars": [
         {
@@ -1109,6 +1145,7 @@ window.CHEONJAMUN_DATA = {
       "end": 140,
       "hanja": "化被草木",
       "meaning": "",
+      "phraseMeaning": "덕화(德化)가 사람이나 짐승에게만 미칠 뿐 아니라 초목에까지도 미치며",
       "reading": "화피초목",
       "chars": [
         {
@@ -1141,6 +1178,7 @@ window.CHEONJAMUN_DATA = {
       "end": 144,
       "hanja": "賴及萬方",
       "meaning": "",
+      "phraseMeaning": "만방이 극히 넓으나 어진 덕이 고루 미치게 된다.",
       "reading": "뢰급만방",
       "chars": [
         {
@@ -1173,6 +1211,7 @@ window.CHEONJAMUN_DATA = {
       "end": 148,
       "hanja": "蓋此身髮",
       "meaning": "",
+      "phraseMeaning": "몸에 있는 털은 사람마다 없는 이가 없듯이",
       "reading": "개차신발",
       "chars": [
         {
@@ -1205,6 +1244,7 @@ window.CHEONJAMUN_DATA = {
       "end": 152,
       "hanja": "四大五常",
       "meaning": "",
+      "phraseMeaning": "세상에는 네 가지 큰 것(道,天,地,王)과 다섯 가지 떳떳함(仁,義,禮,智,信)이 있다.",
       "reading": "사대오상",
       "chars": [
         {
@@ -1237,6 +1277,7 @@ window.CHEONJAMUN_DATA = {
       "end": 156,
       "hanja": "恭惟鞠養",
       "meaning": "",
+      "phraseMeaning": "국양(몸을 기름)함을 공손히 하라. 이 몸은 부모의 기르신 은혜이기 때문이다.",
       "reading": "공유국양",
       "chars": [
         {
@@ -1269,6 +1310,7 @@ window.CHEONJAMUN_DATA = {
       "end": 160,
       "hanja": "豈敢毀傷",
       "meaning": "",
+      "phraseMeaning": "부모께서 낳아 길러 주신 이 몸을 어찌 감히 훼상할 수 있으랴.",
       "reading": "기감훼상",
       "chars": [
         {
@@ -1301,6 +1343,7 @@ window.CHEONJAMUN_DATA = {
       "end": 164,
       "hanja": "女慕貞絜",
       "meaning": "",
+      "phraseMeaning": "여자는 정조를 굳게 지키고 행실을 단정하게 하여야 하며",
       "reading": "녀모정혈",
       "chars": [
         {
@@ -1333,6 +1376,7 @@ window.CHEONJAMUN_DATA = {
       "end": 168,
       "hanja": "男效才良",
       "meaning": "",
+      "phraseMeaning": "남자는 재능을 닦고 어진 것을 본받아야 한다.",
       "reading": "남효재량",
       "chars": [
         {
@@ -1365,6 +1409,7 @@ window.CHEONJAMUN_DATA = {
       "end": 172,
       "hanja": "知過必改",
       "meaning": "",
+      "phraseMeaning": "누구나 허물이 있는 것이니 허물을 알면 반드시 고쳐야 하고",
       "reading": "지과필개",
       "chars": [
         {
@@ -1397,6 +1442,7 @@ window.CHEONJAMUN_DATA = {
       "end": 176,
       "hanja": "得能莫忘",
       "meaning": "",
+      "phraseMeaning": "사람으로써 알아야 할 것을 배운 후에는 잊지 않도록 노력하여야 한다.",
       "reading": "득능막망",
       "chars": [
         {
@@ -1429,6 +1475,7 @@ window.CHEONJAMUN_DATA = {
       "end": 180,
       "hanja": "罔談彼短",
       "meaning": "",
+      "phraseMeaning": "자기의 단점을 말하지 않는 동시에 남의 잘못을 욕하지 말라.",
       "reading": "망담피단",
       "chars": [
         {
@@ -1461,6 +1508,7 @@ window.CHEONJAMUN_DATA = {
       "end": 184,
       "hanja": "靡恃己長",
       "meaning": "",
+      "phraseMeaning": "자신의 특기를 믿고 자랑하지 말라, 그럼으로써 더욱 발달 한다.",
       "reading": "미시기장",
       "chars": [
         {
@@ -1493,6 +1541,7 @@ window.CHEONJAMUN_DATA = {
       "end": 188,
       "hanja": "信使可覆",
       "meaning": "",
+      "phraseMeaning": "믿음은 움직일 수 없는 진리 이고, 또한 남과의 약속은 지켜야 한다.",
       "reading": "신사가복",
       "chars": [
         {
@@ -1525,6 +1574,7 @@ window.CHEONJAMUN_DATA = {
       "end": 192,
       "hanja": "器欲難量",
       "meaning": "",
+      "phraseMeaning": "사람의 기량은 헤아리기 어려우므로 함부로 판단해서는 안된다.",
       "reading": "기욕난량",
       "chars": [
         {
@@ -1557,6 +1607,7 @@ window.CHEONJAMUN_DATA = {
       "end": 196,
       "hanja": "墨悲絲染",
       "meaning": "",
+      "phraseMeaning": "흰 실에 검은 물이 들면 다시 희지 못함을 슬퍼함. 즉 사람도 매사를 조심하여야 한다",
       "reading": "묵비사염",
       "chars": [
         {
@@ -1589,6 +1640,7 @@ window.CHEONJAMUN_DATA = {
       "end": 200,
       "hanja": "詩讚羔羊",
       "meaning": "",
+      "phraseMeaning": "시경 고양편에 문왕의 덕을 입은 남국 대부의 정직함을 칭찬하였으니 사람의 선악을 말한 것이다.",
       "reading": "시찬고양",
       "chars": [
         {
@@ -1621,6 +1673,7 @@ window.CHEONJAMUN_DATA = {
       "end": 204,
       "hanja": "景行維賢",
       "meaning": "",
+      "phraseMeaning": "행실을 훌륭하게 하고 당당하게 행하면 어진 사람이 된다.",
       "reading": "경행유현",
       "chars": [
         {
@@ -1653,6 +1706,7 @@ window.CHEONJAMUN_DATA = {
       "end": 208,
       "hanja": "克念作聖",
       "meaning": "",
+      "phraseMeaning": "성인의 언행을 잘 생각하여 수양을 쌓으면 자연히 성인이 됨을 말한다.",
       "reading": "극념작성",
       "chars": [
         {
@@ -1685,6 +1739,7 @@ window.CHEONJAMUN_DATA = {
       "end": 212,
       "hanja": "德建名立",
       "meaning": "",
+      "phraseMeaning": "항상 덕을 가지고 세상일을 행하면 자연스럽게 이름도 서게 된다.",
       "reading": "덕건명립",
       "chars": [
         {
@@ -1717,6 +1772,7 @@ window.CHEONJAMUN_DATA = {
       "end": 216,
       "hanja": "形端表正",
       "meaning": "",
+      "phraseMeaning": "몸 형상이 단정하고 깨끗하면 마음도 바르며 또한 그것이 겉으로 드러난다.",
       "reading": "형단표정",
       "chars": [
         {
@@ -1749,6 +1805,7 @@ window.CHEONJAMUN_DATA = {
       "end": 220,
       "hanja": "空谷傳聲",
       "meaning": "",
+      "phraseMeaning": "산골짜기에서 크게 소리치면 울려 퍼져 그대로 전해진다. 즉 악한 일을 당하게 된다.",
       "reading": "공곡전성",
       "chars": [
         {
@@ -1781,6 +1838,7 @@ window.CHEONJAMUN_DATA = {
       "end": 224,
       "hanja": "虛堂習聽",
       "meaning": "",
+      "phraseMeaning": "빈방에서 소리를 내면 울려서 다 들린다. 즉 착한 말을 하면 천리 밖에서도 응한다.",
       "reading": "허당습청",
       "chars": [
         {
@@ -1813,6 +1871,7 @@ window.CHEONJAMUN_DATA = {
       "end": 228,
       "hanja": "禍因惡積",
       "meaning": "",
+      "phraseMeaning": "재앙은 악을 쌓음에 인한 것이므로, 재앙을 받는 이는 평소에 악을 쌓았기 때문이다.",
       "reading": "화인악적",
       "chars": [
         {
@@ -1845,6 +1904,7 @@ window.CHEONJAMUN_DATA = {
       "end": 232,
       "hanja": "福緣善慶",
       "meaning": "",
+      "phraseMeaning": "복은 착한 일에서 오는 것이니, 착한 일을 하면 경사가 온다.",
       "reading": "복연선경",
       "chars": [
         {
@@ -1877,6 +1937,7 @@ window.CHEONJAMUN_DATA = {
       "end": 236,
       "hanja": "尺璧非寶",
       "meaning": "",
+      "phraseMeaning": "지름이 한 자나 되는 보옥도 시간에 비하면 보배라고 할 수 없다.",
       "reading": "척벽비보",
       "chars": [
         {
@@ -1909,6 +1970,7 @@ window.CHEONJAMUN_DATA = {
       "end": 240,
       "hanja": "寸陰是競",
       "meaning": "",
+      "phraseMeaning": "한 자 되는 구슬보다도 잠깐의 시간이 더욱 귀중하니 시간을 아껴야 한다.",
       "reading": "촌음시경",
       "chars": [
         {
@@ -1941,6 +2003,7 @@ window.CHEONJAMUN_DATA = {
       "end": 244,
       "hanja": "資父事君",
       "meaning": "",
+      "phraseMeaning": "아버지를 자료로 하여 임금을 섬길지니, 아버지 섬기는 효도로 임금을 섬겨야 한다.",
       "reading": "자부사군",
       "chars": [
         {
@@ -1973,6 +2036,7 @@ window.CHEONJAMUN_DATA = {
       "end": 248,
       "hanja": "曰嚴與敬",
       "meaning": "",
+      "phraseMeaning": "임금을 대하는 데는 엄숙함과 공경함이 있어야 한다.",
       "reading": "왈엄여경",
       "chars": [
         {
@@ -2005,6 +2069,7 @@ window.CHEONJAMUN_DATA = {
       "end": 252,
       "hanja": "孝當竭力",
       "meaning": "",
+      "phraseMeaning": "부모에게 효도할 때에는 마땅히 힘을 다하여야 한다.",
       "reading": "효당갈력",
       "chars": [
         {
@@ -2037,6 +2102,7 @@ window.CHEONJAMUN_DATA = {
       "end": 256,
       "hanja": "忠則盡命",
       "meaning": "",
+      "phraseMeaning": "충성함에는 곧 목숨을 다하여야 하니 임금을 섬기는 데 몸을 사양해서는 안된다.",
       "reading": "충즉진명",
       "chars": [
         {
@@ -2069,6 +2135,7 @@ window.CHEONJAMUN_DATA = {
       "end": 260,
       "hanja": "臨深履薄",
       "meaning": "",
+      "phraseMeaning": "깊은 곳에 임하듯 하며 얇은 얼음을 밟듯이 세심 주의하여야 한다.",
       "reading": "림심리박",
       "chars": [
         {
@@ -2101,6 +2168,7 @@ window.CHEONJAMUN_DATA = {
       "end": 264,
       "hanja": "夙興溫凊",
       "meaning": "",
+      "phraseMeaning": "일찍 일어나서 추우면 덥게, 더우면 서늘케 하는 것이 부모섬기는 절차 이다.",
       "reading": "숙흥온청",
       "chars": [
         {
@@ -2133,6 +2201,7 @@ window.CHEONJAMUN_DATA = {
       "end": 268,
       "hanja": "似蘭斯馨",
       "meaning": "",
+      "phraseMeaning": "난초같이 꽃다우니 군자의 지조를 비유한 것 이다.",
       "reading": "사란사형",
       "chars": [
         {
@@ -2165,6 +2234,7 @@ window.CHEONJAMUN_DATA = {
       "end": 272,
       "hanja": "如松之盛",
       "meaning": "",
+      "phraseMeaning": "소나무같이 푸르러 성함은 군자의 절개를 말한 것이다.",
       "reading": "여송지성",
       "chars": [
         {
@@ -2197,6 +2267,7 @@ window.CHEONJAMUN_DATA = {
       "end": 276,
       "hanja": "川流不息",
       "meaning": "",
+      "phraseMeaning": "내가 흘러 쉬지 아니하니 군자의 행동거지(꾸준한 노력)를 말한 것이며",
       "reading": "천류불식",
       "chars": [
         {
@@ -2229,6 +2300,7 @@ window.CHEONJAMUN_DATA = {
       "end": 280,
       "hanja": "淵澄取映",
       "meaning": "",
+      "phraseMeaning": "못이 맑아서 비치니, 군자의 마음을 말한 것이다.",
       "reading": "연징취영",
       "chars": [
         {
@@ -2261,6 +2333,7 @@ window.CHEONJAMUN_DATA = {
       "end": 284,
       "hanja": "容止若思",
       "meaning": "",
+      "phraseMeaning": "행동을 덤비지 말고 형용과 행동거지를 조용히 생각하는 침착한 태도를 가져야 한다.",
       "reading": "용지약사",
       "chars": [
         {
@@ -2293,6 +2366,7 @@ window.CHEONJAMUN_DATA = {
       "end": 288,
       "hanja": "言辭安定",
       "meaning": "",
+      "phraseMeaning": "태도만 침착할 뿐 아니라 말도 안정되게 하며 쓸데없는 말을 삼가라.",
       "reading": "언사안정",
       "chars": [
         {
@@ -2325,6 +2399,7 @@ window.CHEONJAMUN_DATA = {
       "end": 292,
       "hanja": "篤初誠美",
       "meaning": "",
+      "phraseMeaning": "무엇이든지 처음에 성실하고 신중히 하여야 한다.",
       "reading": "독초성미",
       "chars": [
         {
@@ -2357,6 +2432,7 @@ window.CHEONJAMUN_DATA = {
       "end": 296,
       "hanja": "慎終宜令",
       "meaning": "",
+      "phraseMeaning": "처음 뿐만 아니라 끝맺음도 좋아야 한다.",
       "reading": "신종의령",
       "chars": [
         {
@@ -2389,6 +2465,7 @@ window.CHEONJAMUN_DATA = {
       "end": 300,
       "hanja": "榮業所基",
       "meaning": "",
+      "phraseMeaning": "이상(以上)과 같이 잘 지키면 번성 하는 기본이 된다.",
       "reading": "영업소기",
       "chars": [
         {
@@ -2421,6 +2498,7 @@ window.CHEONJAMUN_DATA = {
       "end": 304,
       "hanja": "藉甚無竟",
       "meaning": "",
+      "phraseMeaning": "뿐만 아니라 자신의 명예스러운 이름이 길이 전하여질 것이다.",
       "reading": "자심무경",
       "chars": [
         {
@@ -2453,6 +2531,7 @@ window.CHEONJAMUN_DATA = {
       "end": 308,
       "hanja": "學優登仕",
       "meaning": "",
+      "phraseMeaning": "배운 것이 넉넉하면 벼슬에 오를 수 있다.",
       "reading": "학우등사",
       "chars": [
         {
@@ -2485,6 +2564,7 @@ window.CHEONJAMUN_DATA = {
       "end": 312,
       "hanja": "攝職從政",
       "meaning": "",
+      "phraseMeaning": "벼슬을 잡아 정사(政事)를 좇으니 국가정사에 종사한다.",
       "reading": "섭직종정",
       "chars": [
         {
@@ -2517,6 +2597,7 @@ window.CHEONJAMUN_DATA = {
       "end": 316,
       "hanja": "存以甘棠",
       "meaning": "",
+      "phraseMeaning": "주(周)나라 소공이 남국의 아가위나무 아래에서 백성을 교화 하였다.(아가위나무:산사나무)",
       "reading": "존이감당",
       "chars": [
         {
@@ -2549,6 +2630,7 @@ window.CHEONJAMUN_DATA = {
       "end": 320,
       "hanja": "去而益詠",
       "meaning": "",
+      "phraseMeaning": "소공이 죽은 후남국의 백성이 그의 덕을 추모하여 감당시(甘棠詩)를 읊었다.",
       "reading": "거이익영",
       "chars": [
         {
@@ -2581,6 +2663,7 @@ window.CHEONJAMUN_DATA = {
       "end": 324,
       "hanja": "樂殊貴賤",
       "meaning": "",
+      "phraseMeaning": "풍류는 귀천이 다르니 천자는 8일, 제후는 6일, 사대부는 4일, 서민은 2일이다.",
       "reading": "악수귀천",
       "chars": [
         {
@@ -2613,6 +2696,7 @@ window.CHEONJAMUN_DATA = {
       "end": 328,
       "hanja": "禮別尊卑",
       "meaning": "",
+      "phraseMeaning": "예도에 존비의 분별이 있으니 군신유의, 부자유친, 부부유별, 장유유서, 붕우유신의 오륜이 그것이다.",
       "reading": "례별존비",
       "chars": [
         {
@@ -2645,6 +2729,7 @@ window.CHEONJAMUN_DATA = {
       "end": 332,
       "hanja": "上和下睦",
       "meaning": "",
+      "phraseMeaning": "위에서 사랑하고 아래에서 공경함으로써 화목한 가정이 된다.",
       "reading": "상화하목",
       "chars": [
         {
@@ -2677,6 +2762,7 @@ window.CHEONJAMUN_DATA = {
       "end": 336,
       "hanja": "夫唱婦隨",
       "meaning": "",
+      "phraseMeaning": "남편이 주장 하고 아내가 이에 따름. 가정에서의 부부화합의 도리를 이르는 말이다.",
       "reading": "부창부수",
       "chars": [
         {
@@ -2709,6 +2795,7 @@ window.CHEONJAMUN_DATA = {
       "end": 340,
       "hanja": "外受傅訓",
       "meaning": "",
+      "phraseMeaning": "나이 팔 세가 되면 밖으로 나가 스승의 가르침을 받아야 한다.",
       "reading": "외수부훈",
       "chars": [
         {
@@ -2741,6 +2828,7 @@ window.CHEONJAMUN_DATA = {
       "end": 344,
       "hanja": "入奉母儀",
       "meaning": "",
+      "phraseMeaning": "집에 들어서는 어머니를 받들어 종사(從事)해야 한다.",
       "reading": "입봉모의",
       "chars": [
         {
@@ -2773,6 +2861,7 @@ window.CHEONJAMUN_DATA = {
       "end": 348,
       "hanja": "諸姑伯叔",
       "meaning": "",
+      "phraseMeaning": "고모(姑母), 백부(伯父), 숙부(叔父) 등집안 내의 친척등을 말 한다.",
       "reading": "제고백숙",
       "chars": [
         {
@@ -2805,6 +2894,7 @@ window.CHEONJAMUN_DATA = {
       "end": 352,
       "hanja": "猶子比兒",
       "meaning": "",
+      "phraseMeaning": "조카들도 자기의 아이들과 같이 취급 하여야 한다.",
       "reading": "유자비아",
       "chars": [
         {
@@ -2837,6 +2927,7 @@ window.CHEONJAMUN_DATA = {
       "end": 356,
       "hanja": "孔懷兄弟",
       "meaning": "",
+      "phraseMeaning": "형제는 서로 사랑하여 의좋게 지내야 한다.",
       "reading": "공회형제",
       "chars": [
         {
@@ -2869,6 +2960,7 @@ window.CHEONJAMUN_DATA = {
       "end": 360,
       "hanja": "同氣連枝",
       "meaning": "",
+      "phraseMeaning": "형제는 부모의 기운을 같이 받았으니 나무의 가지와 같다.",
       "reading": "동기련지",
       "chars": [
         {
@@ -2901,6 +2993,7 @@ window.CHEONJAMUN_DATA = {
       "end": 364,
       "hanja": "交友投分",
       "meaning": "",
+      "phraseMeaning": "벗을 사귈 때에는 서로가 분에 맞는 사람끼리 사귀어야 하고",
       "reading": "교우투분",
       "chars": [
         {
@@ -2933,6 +3026,7 @@ window.CHEONJAMUN_DATA = {
       "end": 368,
       "hanja": "切磨箴規",
       "meaning": "",
+      "phraseMeaning": "열심히 닦고 배워서 사람으로서의 도리(道理)를 지켜야 한다.",
       "reading": "절마잠규",
       "chars": [
         {
@@ -2965,6 +3059,7 @@ window.CHEONJAMUN_DATA = {
       "end": 372,
       "hanja": "仁慈隱惻",
       "meaning": "",
+      "phraseMeaning": "어진 마음으로 남을 사랑하고 또는 이를 측은(惻隱)히 여겨야 한다.",
       "reading": "인자은측",
       "chars": [
         {
@@ -2997,6 +3092,7 @@ window.CHEONJAMUN_DATA = {
       "end": 376,
       "hanja": "造次弗離",
       "meaning": "",
+      "phraseMeaning": "남을 위한 동정심을 잠시라도 잊지 말고 항상가져야 한다.",
       "reading": "조차불리",
       "chars": [
         {
@@ -3029,6 +3125,7 @@ window.CHEONJAMUN_DATA = {
       "end": 380,
       "hanja": "節義廉退",
       "meaning": "",
+      "phraseMeaning": "청렴과 절개와 의리와 사양함과 물러감은 늘 지켜야 한다.",
       "reading": "절의렴퇴",
       "chars": [
         {
@@ -3061,6 +3158,7 @@ window.CHEONJAMUN_DATA = {
       "end": 384,
       "hanja": "顛沛匪虧",
       "meaning": "",
+      "phraseMeaning": "엎드려지고 자빠져도 이지러지지 않으니 용기를 잃지 않아야 한다.",
       "reading": "전패비휴",
       "chars": [
         {
@@ -3093,6 +3191,7 @@ window.CHEONJAMUN_DATA = {
       "end": 388,
       "hanja": "性靜情逸",
       "meaning": "",
+      "phraseMeaning": "성품이 고요하면 뜻이 편안하니 고요함은 천성이요, 동작 함은 인정 이다.",
       "reading": "성정정일",
       "chars": [
         {
@@ -3125,6 +3224,7 @@ window.CHEONJAMUN_DATA = {
       "end": 392,
       "hanja": "心動神疲",
       "meaning": "",
+      "phraseMeaning": "마음이 움직이면 신기(身氣)가 피곤 하니 마음이 불안 하면 신기가 불편하다.",
       "reading": "심동신피",
       "chars": [
         {
@@ -3157,6 +3257,7 @@ window.CHEONJAMUN_DATA = {
       "end": 396,
       "hanja": "守真志滿",
       "meaning": "",
+      "phraseMeaning": "사람의 도리를 지키면 뜻이 가득 차고, 군자의 도를 지키면 뜻이 편안하다.",
       "reading": "수진지만",
       "chars": [
         {
@@ -3189,6 +3290,7 @@ window.CHEONJAMUN_DATA = {
       "end": 400,
       "hanja": "逐物意移",
       "meaning": "",
+      "phraseMeaning": "마음이 불안 함은 욕심이 있어서 그러 하고, 너무 욕심내면 마음도 변한다.",
       "reading": "축물의이",
       "chars": [
         {
@@ -3221,6 +3323,7 @@ window.CHEONJAMUN_DATA = {
       "end": 404,
       "hanja": "堅持雅操",
       "meaning": "",
+      "phraseMeaning": "맑은 절조(節操)를 굳게 가지고 있으면 나의 도리를 극진(極盡)히 하는 것이다",
       "reading": "견지아조",
       "chars": [
         {
@@ -3253,6 +3356,7 @@ window.CHEONJAMUN_DATA = {
       "end": 408,
       "hanja": "好爵自縻",
       "meaning": "",
+      "phraseMeaning": "스스로 벼슬을 얻게 되니 찬작(鑽灼)을 극진하면 인작(人爵)이 스스로 이르게 된다.",
       "reading": "호작자미",
       "chars": [
         {
@@ -3285,6 +3389,7 @@ window.CHEONJAMUN_DATA = {
       "end": 412,
       "hanja": "都邑華夏",
       "meaning": "",
+      "phraseMeaning": "도읍은 왕성의 지위(地位)를 말한 것이고, 화하는 당시중국을 지칭하던 말이다.",
       "reading": "도읍화하",
       "chars": [
         {
@@ -3317,6 +3422,7 @@ window.CHEONJAMUN_DATA = {
       "end": 416,
       "hanja": "東西二京",
       "meaning": "",
+      "phraseMeaning": "동과 서에 두 서울이 있으니, 동경은 낙양(洛陽)이고 서경은 장안(長安) 이다.",
       "reading": "동서이경",
       "chars": [
         {
@@ -3349,6 +3455,7 @@ window.CHEONJAMUN_DATA = {
       "end": 420,
       "hanja": "背邙面洛",
       "meaning": "",
+      "phraseMeaning": "동경은 북에 북망산이 있고, 낙양은 남에 낙천이 있다.",
       "reading": "배망면락",
       "chars": [
         {
@@ -3381,6 +3488,7 @@ window.CHEONJAMUN_DATA = {
       "end": 424,
       "hanja": "浮渭據涇",
       "meaning": "",
+      "phraseMeaning": "위수에 뜨고 경수를 눌렀으니, 장안은 서북에 위천, 경수, 두 강물이 흐르고 있다.",
       "reading": "부위거경",
       "chars": [
         {
@@ -3413,6 +3521,7 @@ window.CHEONJAMUN_DATA = {
       "end": 428,
       "hanja": "宮殿盤郁",
       "meaning": "",
+      "phraseMeaning": "궁전은 울창한 나무 사이에 서린 듯 위치 하고",
       "reading": "궁전반욱",
       "chars": [
         {
@@ -3445,6 +3554,7 @@ window.CHEONJAMUN_DATA = {
       "end": 432,
       "hanja": "樓觀飛驚",
       "meaning": "",
+      "phraseMeaning": "궁전 가운데 있는 누각과 관대는 높아서, 올라가면 하늘을 나는 듯하여 놀란다.",
       "reading": "루관비경",
       "chars": [
         {
@@ -3477,6 +3587,7 @@ window.CHEONJAMUN_DATA = {
       "end": 436,
       "hanja": "圖寫禽獸",
       "meaning": "",
+      "phraseMeaning": "궁전 내부에는 유명한 화가들이 금수를 그린 그림, 조각 등으로 장식되어 있고",
       "reading": "도사금수",
       "chars": [
         {
@@ -3509,6 +3620,7 @@ window.CHEONJAMUN_DATA = {
       "end": 440,
       "hanja": "畫彩仙靈",
       "meaning": "",
+      "phraseMeaning": "신선과 신령의 그림도 화려하게 채색 되어 있다.",
       "reading": "화채선령",
       "chars": [
         {
@@ -3541,6 +3653,7 @@ window.CHEONJAMUN_DATA = {
       "end": 444,
       "hanja": "丙舍傍啟",
       "meaning": "",
+      "phraseMeaning": "병사곁에 통로를 열어 궁전내를 출입 하는 사람들의 편리를 도모 했다.",
       "reading": "병사방계",
       "chars": [
         {
@@ -3573,6 +3686,7 @@ window.CHEONJAMUN_DATA = {
       "end": 448,
       "hanja": "甲帳對楹",
       "meaning": "",
+      "phraseMeaning": "아름다운 갑장이 기둥을 대하였으니, 동방삭이 갑장을 지어 임금이 잠시정지 하는 곳.(동방삭(東方朔) - 중국 한무제의 측근이자 문인. 삼천갑자(18만년) 동방삭으로 유명하다.)",
       "reading": "갑장대영",
       "chars": [
         {
@@ -3605,6 +3719,7 @@ window.CHEONJAMUN_DATA = {
       "end": 452,
       "hanja": "肆筵設席",
       "meaning": "",
+      "phraseMeaning": "자리를 베풀고 돗자리를 펴 연회하는 좌석을 만들고",
       "reading": "사연설석",
       "chars": [
         {
@@ -3637,6 +3752,7 @@ window.CHEONJAMUN_DATA = {
       "end": 456,
       "hanja": "鼓瑟吹笙",
       "meaning": "",
+      "phraseMeaning": "비파를 치고 저를 부니 잔치하는 풍류이다.",
       "reading": "고슬취생",
       "chars": [
         {
@@ -3669,6 +3785,7 @@ window.CHEONJAMUN_DATA = {
       "end": 460,
       "hanja": "升階納陛",
       "meaning": "",
+      "phraseMeaning": "문무백관이 계단을 올라 임금께 납폐 하는 절차 이다.",
       "reading": "승계납폐",
       "chars": [
         {
@@ -3701,6 +3818,7 @@ window.CHEONJAMUN_DATA = {
       "end": 464,
       "hanja": "弁轉疑星",
       "meaning": "",
+      "phraseMeaning": "많은 사람들의 관(冠)에서 번쩍이는 구슬이 별인가 의심할 정도이다.",
       "reading": "변전의성",
       "chars": [
         {
@@ -3733,6 +3851,7 @@ window.CHEONJAMUN_DATA = {
       "end": 468,
       "hanja": "右通廣內",
       "meaning": "",
+      "phraseMeaning": "오른편에 광내가 통하니 광내는 나라 비서(秘書)를 두는 집이다.",
       "reading": "우통광내",
       "chars": [
         {
@@ -3765,6 +3884,7 @@ window.CHEONJAMUN_DATA = {
       "end": 472,
       "hanja": "左達承明",
       "meaning": "",
+      "phraseMeaning": "왼편에는 승명이 이어지니 승명은 사기(史記)를 교열(교정·검열)하는 집이다.",
       "reading": "좌달승명",
       "chars": [
         {
@@ -3797,6 +3917,7 @@ window.CHEONJAMUN_DATA = {
       "end": 476,
       "hanja": "既集墳典",
       "meaning": "",
+      "phraseMeaning": "이미 분과 전을 모았으니, 삼황의 글은 삼분(三墳)이요, 오제의 글은 오전(五典) 이다.",
       "reading": "기집분전",
       "chars": [
         {
@@ -3829,6 +3950,7 @@ window.CHEONJAMUN_DATA = {
       "end": 480,
       "hanja": "亦聚群英",
       "meaning": "",
+      "phraseMeaning": "또한 여러 영웅을 모으니, 분전을 강론 하여 치국(治國)하는 도를 밝혔다.",
       "reading": "역취군영",
       "chars": [
         {
@@ -3861,6 +3983,7 @@ window.CHEONJAMUN_DATA = {
       "end": 484,
       "hanja": "杜稿鍾隸",
       "meaning": "",
+      "phraseMeaning": "초서를 처음으로 쓴 두고와 예서를 쓴 종례의 글로 비치(備置)되어 있다.",
       "reading": "두고종례",
       "chars": [
         {
@@ -3893,6 +4016,7 @@ window.CHEONJAMUN_DATA = {
       "end": 488,
       "hanja": "漆書壁經",
       "meaning": "",
+      "phraseMeaning": "한나라 영제가 돌벽에서 발견한 칠서와 공자가 발견한 육경도 비치되어 있다.",
       "reading": "칠서벽경",
       "chars": [
         {
@@ -3925,6 +4049,7 @@ window.CHEONJAMUN_DATA = {
       "end": 492,
       "hanja": "府羅將相",
       "meaning": "",
+      "phraseMeaning": "마을 좌우에 장수(將帥)와 정승(政丞)이 벌려 있다.",
       "reading": "부라장상",
       "chars": [
         {
@@ -3957,6 +4082,7 @@ window.CHEONJAMUN_DATA = {
       "end": 496,
       "hanja": "路俠槐卿",
       "meaning": "",
+      "phraseMeaning": "길에 고위 고관인 삼공구경(三公九卿)의 마차가 열지어 궁전으로 들어 간다.",
       "reading": "로협괴경",
       "chars": [
         {
@@ -3989,6 +4115,7 @@ window.CHEONJAMUN_DATA = {
       "end": 500,
       "hanja": "戶封八縣",
       "meaning": "",
+      "phraseMeaning": "한나라가 천하를 통일하고 여덟 고을의 민호(民戶)를 주어 공신을 봉하였다.",
       "reading": "호봉팔현",
       "chars": [
         {
@@ -4021,6 +4148,7 @@ window.CHEONJAMUN_DATA = {
       "end": 504,
       "hanja": "家給千兵",
       "meaning": "",
+      "phraseMeaning": "제후(諸侯)나라에 일천 군사를 주어 그의 집을 호위시켰다.",
       "reading": "가급천병",
       "chars": [
         {
@@ -4053,6 +4181,7 @@ window.CHEONJAMUN_DATA = {
       "end": 508,
       "hanja": "高冠陪輦",
       "meaning": "",
+      "phraseMeaning": "높은 관을 쓰고 가마로 모시니 제후의 예로 대접 했고",
       "reading": "고관배련",
       "chars": [
         {
@@ -4085,6 +4214,7 @@ window.CHEONJAMUN_DATA = {
       "end": 512,
       "hanja": "驅轂振纓",
       "meaning": "",
+      "phraseMeaning": "수레를 몰며 갓끈이 떨치니 임금 출행에 제후의 위엄(威嚴)이 있다.",
       "reading": "구곡진영",
       "chars": [
         {
@@ -4117,6 +4247,7 @@ window.CHEONJAMUN_DATA = {
       "end": 516,
       "hanja": "世祿侈富",
       "meaning": "",
+      "phraseMeaning": "대대로 녹을 받는 것이 사치하고 부유하니 제후의 자손이 세세 관록이 무성하고",
       "reading": "세록치부",
       "chars": [
         {
@@ -4149,6 +4280,7 @@ window.CHEONJAMUN_DATA = {
       "end": 520,
       "hanja": "車駕肥輕",
       "meaning": "",
+      "phraseMeaning": "수레의 말은 살찌고 몸의 의복은 가볍게 차려져 있다.",
       "reading": "거가비경",
       "chars": [
         {
@@ -4181,6 +4313,7 @@ window.CHEONJAMUN_DATA = {
       "end": 524,
       "hanja": "策功茂實",
       "meaning": "",
+      "phraseMeaning": "공을 꾀함에 무성하고 충실 하니",
       "reading": "책공무실",
       "chars": [
         {
@@ -4213,6 +4346,7 @@ window.CHEONJAMUN_DATA = {
       "end": 528,
       "hanja": "勒碑刻銘",
       "meaning": "",
+      "phraseMeaning": "비를 세워 이름을 새겨서 그 공을 찬양 하며 후세에 전한다.",
       "reading": "륵비각명",
       "chars": [
         {
@@ -4245,6 +4379,7 @@ window.CHEONJAMUN_DATA = {
       "end": 532,
       "hanja": "磻溪伊尹",
       "meaning": "",
+      "phraseMeaning": "주나라 문왕은 반계에서 강태공을 맞고, 은나라 탕왕은 신야(莘野)에서 이윤을 맞이함.",
       "reading": "반계이윤",
       "chars": [
         {
@@ -4277,6 +4412,7 @@ window.CHEONJAMUN_DATA = {
       "end": 536,
       "hanja": "佐時阿衡",
       "meaning": "",
+      "phraseMeaning": "위급한 때에 도와 재상의 칭호인 아형의 벼슬에 올랐다.",
       "reading": "좌시아형",
       "chars": [
         {
@@ -4309,6 +4445,7 @@ window.CHEONJAMUN_DATA = {
       "end": 540,
       "hanja": "奄宅曲阜",
       "meaning": "",
+      "phraseMeaning": "주공(周公)에게 큰 공이 있어 노(魯)나라에 봉한 후 곡부에다 궁전을 세웠다.",
       "reading": "엄택곡부",
       "chars": [
         {
@@ -4341,6 +4478,7 @@ window.CHEONJAMUN_DATA = {
       "end": 544,
       "hanja": "微旦孰營",
       "meaning": "",
+      "phraseMeaning": "주공(周公)인 단(旦)이 아니면 어찌 큰 궁전을 세웠으리오.",
       "reading": "미단숙영",
       "chars": [
         {
@@ -4373,6 +4511,7 @@ window.CHEONJAMUN_DATA = {
       "end": 548,
       "hanja": "桓公匡合",
       "meaning": "",
+      "phraseMeaning": "제나라 환공은 많은 제후들을 바르게 하고 화합시켜 초를 물리치고 난을 바로 잡았다.",
       "reading": "환공광합",
       "chars": [
         {
@@ -4405,6 +4544,7 @@ window.CHEONJAMUN_DATA = {
       "end": 552,
       "hanja": "濟弱扶傾",
       "meaning": "",
+      "phraseMeaning": "약한 나라를 구제 하고 기울어지는 제신(諸臣)을 도와서 붙들어 주었다.",
       "reading": "제약부경",
       "chars": [
         {
@@ -4437,6 +4577,7 @@ window.CHEONJAMUN_DATA = {
       "end": 556,
       "hanja": "綺回漢惠",
       "meaning": "",
+      "phraseMeaning": "한나라 네 현인의 한 사람인 기(綺)가 한나라 혜제(惠帝)를 회복 시켰다.",
       "reading": "기회한혜",
       "chars": [
         {
@@ -4469,6 +4610,7 @@ window.CHEONJAMUN_DATA = {
       "end": 560,
       "hanja": "說感武丁",
       "meaning": "",
+      "phraseMeaning": "부열이 들에서 역사함에 무정의 꿈에 감동되어 곧 정승이 되었다.",
       "reading": "열감무정",
       "chars": [
         {
@@ -4501,6 +4643,7 @@ window.CHEONJAMUN_DATA = {
       "end": 564,
       "hanja": "俊乂密勿",
       "meaning": "",
+      "phraseMeaning": "준걸(俊傑)과 재사(才士)가 조정에 모여 빽빽하게 모이다.",
       "reading": "준예밀물",
       "chars": [
         {
@@ -4533,6 +4676,7 @@ window.CHEONJAMUN_DATA = {
       "end": 568,
       "hanja": "多士寔寧",
       "meaning": "",
+      "phraseMeaning": "훌륭한 선비가 조정에 많으니 국가가 태평함이라.",
       "reading": "다사식녕",
       "chars": [
         {
@@ -4565,6 +4709,7 @@ window.CHEONJAMUN_DATA = {
       "end": 572,
       "hanja": "晉楚更霸",
       "meaning": "",
+      "phraseMeaning": "진과 초가 다시 으뜸이 되니, 진문공(晉文公), 초장왕(楚莊王)이 패왕(覇王)이 됨.",
       "reading": "진초갱패",
       "chars": [
         {
@@ -4597,6 +4742,7 @@ window.CHEONJAMUN_DATA = {
       "end": 576,
       "hanja": "趙魏困橫",
       "meaning": "",
+      "phraseMeaning": "조와 위는 횡에 곤하니, 육군(六群) 때에 진(秦)나라를 섬기자 함을 횡(橫)이라 한다.",
       "reading": "조위곤횡",
       "chars": [
         {
@@ -4629,6 +4775,7 @@ window.CHEONJAMUN_DATA = {
       "end": 580,
       "hanja": "假途滅虢",
       "meaning": "",
+      "phraseMeaning": "진헌공(晉獻公)이 우국의 길을 빌려 괵국(虢國)을 멸하고, 돌아오는 길에 우국도 멸함.",
       "reading": "가도멸괵",
       "chars": [
         {
@@ -4661,6 +4808,7 @@ window.CHEONJAMUN_DATA = {
       "end": 584,
       "hanja": "踐土會盟",
       "meaning": "",
+      "phraseMeaning": "진(晉)나라 문공이 제후를 천토에 모아, 주나라의 천자를 공경하고 조공할 것을 맹세함.",
       "reading": "천토회맹",
       "chars": [
         {
@@ -4693,6 +4841,7 @@ window.CHEONJAMUN_DATA = {
       "end": 588,
       "hanja": "何遵約法",
       "meaning": "",
+      "phraseMeaning": "소하는 한고조(유방)와 더불어 약법삼장(約法三章)을 정하여 준행(遵行)함.",
       "reading": "하준약법",
       "chars": [
         {
@@ -4725,6 +4874,7 @@ window.CHEONJAMUN_DATA = {
       "end": 592,
       "hanja": "韓弊煩刑",
       "meaning": "",
+      "phraseMeaning": "한비는 진왕(晉王)을 달래 형벌(刑罰)을 펴다가 그 형벌(刑罰)에 죽었다.",
       "reading": "한폐번형",
       "chars": [
         {
@@ -4757,6 +4907,7 @@ window.CHEONJAMUN_DATA = {
       "end": 596,
       "hanja": "起翦頗牧",
       "meaning": "",
+      "phraseMeaning": "백기와 왕전은 진(秦)나라 장수요, 염파와 이목은 조(趙)나라 장수 이다.",
       "reading": "기전파목",
       "chars": [
         {
@@ -4789,6 +4940,7 @@ window.CHEONJAMUN_DATA = {
       "end": 600,
       "hanja": "用軍最精",
       "meaning": "",
+      "phraseMeaning": "군사 쓰기를 가장 정교히 하였다.",
       "reading": "용군최정",
       "chars": [
         {
@@ -4821,6 +4973,7 @@ window.CHEONJAMUN_DATA = {
       "end": 604,
       "hanja": "宣威沙漠",
       "meaning": "",
+      "phraseMeaning": "장수로서 그 위엄(威嚴)은 멀리 사막(沙漠)에까지 퍼짐.",
       "reading": "선위사막",
       "chars": [
         {
@@ -4853,6 +5006,7 @@ window.CHEONJAMUN_DATA = {
       "end": 608,
       "hanja": "馳譽丹青",
       "meaning": "",
+      "phraseMeaning": "그 이름은 생전 뿐 아니라 죽은 후에도 전하기 위하여 초상(肖像)을 기린각에 그렸다.",
       "reading": "치예단청",
       "chars": [
         {
@@ -4885,6 +5039,7 @@ window.CHEONJAMUN_DATA = {
       "end": 612,
       "hanja": "九州禹跡",
       "meaning": "",
+      "phraseMeaning": "하우씨(夏禹氏)가 구주를 분별하니 기(冀),연(兗),청(靑),서(徐),형(荊),양(揚),예(豫),양(梁),옹(雍)이 9주 이다.",
       "reading": "구주우적",
       "chars": [
         {
@@ -4917,6 +5072,7 @@ window.CHEONJAMUN_DATA = {
       "end": 616,
       "hanja": "百郡秦并",
       "meaning": "",
+      "phraseMeaning": "진시황(秦始皇)이 천하를 봉군하는 법을 폐하고 일백군(100郡)을 두었다.",
       "reading": "백군진병",
       "chars": [
         {
@@ -4949,6 +5105,7 @@ window.CHEONJAMUN_DATA = {
       "end": 620,
       "hanja": "岳宗泰岱",
       "meaning": "",
+      "phraseMeaning": "오악은 동 태산, 서 화산, 남 형산, 북 항산, 중 숭산이니, 항산과 태산이 조종(祖宗)이다.",
       "reading": "악종태대",
       "chars": [
         {
@@ -4981,6 +5138,7 @@ window.CHEONJAMUN_DATA = {
       "end": 624,
       "hanja": "禪主云亭",
       "meaning": "",
+      "phraseMeaning": "운과 정은 천자를 봉선하고 제사 하는 곳이니, 운정(云亭)은 태산(泰山)에 있다.",
       "reading": "선주운정",
       "chars": [
         {
@@ -5013,6 +5171,7 @@ window.CHEONJAMUN_DATA = {
       "end": 628,
       "hanja": "雁門紫塞",
       "meaning": "",
+      "phraseMeaning": "기러기도 넘어가지 못한다는 높은 산에 있는 관문인 안문 과 붉은 흙으로 만든 요새 만리장성을 자색 이라 함. (塞:변방 새,막힐 색)",
       "reading": "안문자새",
       "chars": [
         {
@@ -5045,6 +5204,7 @@ window.CHEONJAMUN_DATA = {
       "end": 632,
       "hanja": "雞田赤城",
       "meaning": "",
+      "phraseMeaning": "계전(鷄田)은 웅주에 있는 고을이고, 적성(赤城)은 기주에 있는 고을 이다.",
       "reading": "계전적성",
       "chars": [
         {
@@ -5077,6 +5237,7 @@ window.CHEONJAMUN_DATA = {
       "end": 636,
       "hanja": "昆池碣石",
       "meaning": "",
+      "phraseMeaning": "곤지(昆池)는 운남 곤명현(昆明縣)에 있고, 갈석(竭石)은 부평현(富平縣)에 있다.",
       "reading": "곤지갈석",
       "chars": [
         {
@@ -5109,6 +5270,7 @@ window.CHEONJAMUN_DATA = {
       "end": 640,
       "hanja": "鉅野洞庭",
       "meaning": "",
+      "phraseMeaning": "거야는 태산동편에 있는 광야(廣野), 동정호는호남성에 있는 중국제1의 호수 이다.",
       "reading": "거야동정",
       "chars": [
         {
@@ -5141,6 +5303,7 @@ window.CHEONJAMUN_DATA = {
       "end": 644,
       "hanja": "曠遠綿邈",
       "meaning": "",
+      "phraseMeaning": "산, 벌판, 호수등이 아득하고 멀리 그리고 널리 줄지어 있음을 말함.",
       "reading": "광원면막",
       "chars": [
         {
@@ -5173,6 +5336,7 @@ window.CHEONJAMUN_DATA = {
       "end": 648,
       "hanja": "岩岫杳冥",
       "meaning": "",
+      "phraseMeaning": "큰 바위와 산 봉우리가 묘연(渺然)하고 아득 하다.",
       "reading": "암수묘명",
       "chars": [
         {
@@ -5205,6 +5369,7 @@ window.CHEONJAMUN_DATA = {
       "end": 652,
       "hanja": "治本於農",
       "meaning": "",
+      "phraseMeaning": "다스리는 것은 농사를 근본으로 하니, 중농(重農) 정치(政治)를 말함.",
       "reading": "치본어농",
       "chars": [
         {
@@ -5237,6 +5402,7 @@ window.CHEONJAMUN_DATA = {
       "end": 656,
       "hanja": "務茲稼穡",
       "meaning": "",
+      "phraseMeaning": "때맞춰 심고 힘써 일하며 많은 수익(收益)을 거둔다.",
       "reading": "무자가색",
       "chars": [
         {
@@ -5269,6 +5435,7 @@ window.CHEONJAMUN_DATA = {
       "end": 660,
       "hanja": "俶載南畝",
       "meaning": "",
+      "phraseMeaning": "봄이 오면 비로소 남쪽 밭에서 농작물을 심기 시작함. (畝:이랑 무/묘)",
       "reading": "숙재남무",
       "chars": [
         {
@@ -5301,6 +5468,7 @@ window.CHEONJAMUN_DATA = {
       "end": 664,
       "hanja": "我藝黍稷",
       "meaning": "",
+      "phraseMeaning": "나는 기장과 피를 심는 일에 열중하겠다.",
       "reading": "아예서직",
       "chars": [
         {
@@ -5333,6 +5501,7 @@ window.CHEONJAMUN_DATA = {
       "end": 668,
       "hanja": "稅熟貢新",
       "meaning": "",
+      "phraseMeaning": "곡식이 익으면 세금을 내게 하고, 신곡(新穀)으로 종묘(宗廟)에 제사(祭祀)를 올린다.",
       "reading": "세숙공신",
       "chars": [
         {
@@ -5365,6 +5534,7 @@ window.CHEONJAMUN_DATA = {
       "end": 672,
       "hanja": "勸賞黜陟",
       "meaning": "",
+      "phraseMeaning": "농민의 의기를 앙양(昻揚)키 위하여 열심인 자는 상 주고, 게을리한 자는 출척(黜陟)함.",
       "reading": "권상출척",
       "chars": [
         {
@@ -5397,6 +5567,7 @@ window.CHEONJAMUN_DATA = {
       "end": 676,
       "hanja": "孟軻敦素",
       "meaning": "",
+      "phraseMeaning": "맹자(孟子)는 그 모친의 교훈(敎訓)을 받아 성품이 두텁고 유순 하였다.",
       "reading": "맹가돈소",
       "chars": [
         {
@@ -5429,6 +5600,7 @@ window.CHEONJAMUN_DATA = {
       "end": 680,
       "hanja": "史魚秉直",
       "meaning": "",
+      "phraseMeaning": "사어(史魚)라는 사람은 위나라 태부(太傅)였으며, 그 성격이 매우 강직(剛直) 하였다.",
       "reading": "사어병직",
       "chars": [
         {
@@ -5461,6 +5633,7 @@ window.CHEONJAMUN_DATA = {
       "end": 684,
       "hanja": "庶幾中庸",
       "meaning": "",
+      "phraseMeaning": "어떠한 일도 한쪽으로 기울어지게 일하면 안 된다.",
       "reading": "서기중용",
       "chars": [
         {
@@ -5493,6 +5666,7 @@ window.CHEONJAMUN_DATA = {
       "end": 688,
       "hanja": "勞謙謹敕",
       "meaning": "",
+      "phraseMeaning": "근로(勤勞)하고 겸손(謙遜)하며 삼가고 신칙(申飭)하면 중용(中庸)의 도에 이른다.",
       "reading": "로겸근칙",
       "chars": [
         {
@@ -5525,6 +5699,7 @@ window.CHEONJAMUN_DATA = {
       "end": 692,
       "hanja": "聆音察理",
       "meaning": "",
+      "phraseMeaning": "소리를 듣고 그 거동(擧動)을 살피니, 조그마한 일이라도 주의(注意)하여야 한다.",
       "reading": "령음찰리",
       "chars": [
         {
@@ -5557,6 +5732,7 @@ window.CHEONJAMUN_DATA = {
       "end": 696,
       "hanja": "鑒貌辨色",
       "meaning": "",
+      "phraseMeaning": "모양과 거동으로 그 마음속을 분별(分別)할 수 있다.",
       "reading": "감모변색",
       "chars": [
         {
@@ -5589,6 +5765,7 @@ window.CHEONJAMUN_DATA = {
       "end": 700,
       "hanja": "貽厥嘉猷",
       "meaning": "",
+      "phraseMeaning": "도리(道理)를 지키고 착함으로 자손에 좋은 것을 끼쳐야 한다.",
       "reading": "이궐가유",
       "chars": [
         {
@@ -5621,6 +5798,7 @@ window.CHEONJAMUN_DATA = {
       "end": 704,
       "hanja": "勉其祗植",
       "meaning": "",
+      "phraseMeaning": "착한 것으로 자손에 남겨 줄 것을 힘써야 좋은 가정(家庭)을 이룰 것이다.",
       "reading": "면기지식",
       "chars": [
         {
@@ -5653,6 +5831,7 @@ window.CHEONJAMUN_DATA = {
       "end": 708,
       "hanja": "省躬譏誡",
       "meaning": "",
+      "phraseMeaning": "나무람과 경계(警戒)함이 있는가 염려(念慮)하며 몸을 살펴야 한다.",
       "reading": "성궁기계",
       "chars": [
         {
@@ -5685,6 +5864,7 @@ window.CHEONJAMUN_DATA = {
       "end": 712,
       "hanja": "寵增抗極",
       "meaning": "",
+      "phraseMeaning": "총애(寵愛)가 더할수록 교만(驕慢)한 태도를 부리지 말고 더욱 조심하여야 한다.",
       "reading": "총증항극",
       "chars": [
         {
@@ -5717,6 +5897,7 @@ window.CHEONJAMUN_DATA = {
       "end": 716,
       "hanja": "殆辱近恥",
       "meaning": "",
+      "phraseMeaning": "총애를 받는다고 욕된 일을 하면 머지 않아 위태(危殆)함과 치욕(恥辱)이 온다.",
       "reading": "태욕근치",
       "chars": [
         {
@@ -5749,6 +5930,7 @@ window.CHEONJAMUN_DATA = {
       "end": 720,
       "hanja": "林皋幸即",
       "meaning": "",
+      "phraseMeaning": "부귀 할지라도 검소 하여 산간수풀에서 편히 지내는 것도 다행한 일이다.",
       "reading": "림고행즉",
       "chars": [
         {
@@ -5781,6 +5963,7 @@ window.CHEONJAMUN_DATA = {
       "end": 724,
       "hanja": "兩疏見機",
       "meaning": "",
+      "phraseMeaning": "한나라의 소광과 소수는 기틀을 보고 상소 하고 낙향(落鄕) 하였다.",
       "reading": "량소견기",
       "chars": [
         {
@@ -5813,6 +5996,7 @@ window.CHEONJAMUN_DATA = {
       "end": 728,
       "hanja": "解組誰逼",
       "meaning": "",
+      "phraseMeaning": "관(冠)의 끈을 풀어 사직(辭職)하고 돌아가니 누가 핍박(逼迫)하리오.",
       "reading": "해조수핍",
       "chars": [
         {
@@ -5845,6 +6029,7 @@ window.CHEONJAMUN_DATA = {
       "end": 732,
       "hanja": "索居閒處",
       "meaning": "",
+      "phraseMeaning": "퇴직(退職)하여 한가(閑暇)한 곳에서 세상을 보냈다.",
       "reading": "색거한처",
       "chars": [
         {
@@ -5877,6 +6062,7 @@ window.CHEONJAMUN_DATA = {
       "end": 736,
       "hanja": "沉默寂寥",
       "meaning": "",
+      "phraseMeaning": "세상의 번뇌를 피하여 은거하니 아무 일도 없고 조용하기만 하구나.",
       "reading": "침묵적료",
       "chars": [
         {
@@ -5909,6 +6095,7 @@ window.CHEONJAMUN_DATA = {
       "end": 740,
       "hanja": "求古尋論",
       "meaning": "",
+      "phraseMeaning": "옛것을 찾아 의논(議論)하고 고인(古人)을 찾아 토론(討論) 한다.",
       "reading": "구고심론",
       "chars": [
         {
@@ -5941,6 +6128,7 @@ window.CHEONJAMUN_DATA = {
       "end": 744,
       "hanja": "散慮逍遙",
       "meaning": "",
+      "phraseMeaning": "세상일을 잊어버리고 자연속에서 한가하게 즐긴다.",
       "reading": "산려소요",
       "chars": [
         {
@@ -5973,6 +6161,7 @@ window.CHEONJAMUN_DATA = {
       "end": 748,
       "hanja": "欣奏累遣",
       "meaning": "",
+      "phraseMeaning": "기쁨은 알리고 더러움은 멀리 보내다.",
       "reading": "흔주루견",
       "chars": [
         {
@@ -6005,6 +6194,7 @@ window.CHEONJAMUN_DATA = {
       "end": 752,
       "hanja": "慼謝歡招",
       "meaning": "",
+      "phraseMeaning": "심중(心中)의 슬픈 것은 없어지고 즐거움만 부른 듯이 오게 된다.",
       "reading": "척사환초",
       "chars": [
         {
@@ -6037,6 +6227,7 @@ window.CHEONJAMUN_DATA = {
       "end": 756,
       "hanja": "渠荷的歷",
       "meaning": "",
+      "phraseMeaning": "개천의 연꽃도 아름다우니 그 향기를 잡아 볼 만하다.",
       "reading": "거하적력",
       "chars": [
         {
@@ -6069,6 +6260,7 @@ window.CHEONJAMUN_DATA = {
       "end": 760,
       "hanja": "園莽抽條",
       "meaning": "",
+      "phraseMeaning": "동산의 풀은 땅속 양분(養分)으로 가지가 뻗고 크게 자란다.",
       "reading": "원망추조",
       "chars": [
         {
@@ -6101,6 +6293,7 @@ window.CHEONJAMUN_DATA = {
       "end": 764,
       "hanja": "枇杷晚翠",
       "meaning": "",
+      "phraseMeaning": "비파나무는 늦은 겨울에도 그 빛은 푸르다.",
       "reading": "비파만취",
       "chars": [
         {
@@ -6133,6 +6326,7 @@ window.CHEONJAMUN_DATA = {
       "end": 768,
       "hanja": "梧桐蚤凋",
       "meaning": "",
+      "phraseMeaning": "오동잎은 가을이면 다른 나무보다 먼저 마른다.",
       "reading": "오동조조",
       "chars": [
         {
@@ -6165,6 +6359,7 @@ window.CHEONJAMUN_DATA = {
       "end": 772,
       "hanja": "陳根委翳",
       "meaning": "",
+      "phraseMeaning": "가을이 오면 오동 뿐 아니라 고목의 뿌리는 시들어 마른다.",
       "reading": "진근위예",
       "chars": [
         {
@@ -6197,6 +6392,7 @@ window.CHEONJAMUN_DATA = {
       "end": 776,
       "hanja": "落葉飄搖",
       "meaning": "",
+      "phraseMeaning": "가을이 오면 낙엽(落葉)이 펄펄 날리며 떨어 진다.",
       "reading": "락엽표요",
       "chars": [
         {
@@ -6229,6 +6425,7 @@ window.CHEONJAMUN_DATA = {
       "end": 780,
       "hanja": "游鵾獨運",
       "meaning": "",
+      "phraseMeaning": "곤어(鯤魚)는 북해(北海)의 큰 고기이며 홀로 창해(蒼海)를 헤엄쳐 논다.",
       "reading": "유곤독운",
       "chars": [
         {
@@ -6261,6 +6458,7 @@ window.CHEONJAMUN_DATA = {
       "end": 784,
       "hanja": "凌摩絳霄",
       "meaning": "",
+      "phraseMeaning": "붉은 노을이 진 하늘을 업신여기는 듯이 선회하고 있다.",
       "reading": "릉마강소",
       "chars": [
         {
@@ -6293,6 +6491,7 @@ window.CHEONJAMUN_DATA = {
       "end": 788,
       "hanja": "耽讀玩市",
       "meaning": "",
+      "phraseMeaning": "한나라의 왕총은 독서를 즐겨 서점에 가서 탐독(耽讀)했다.",
       "reading": "탐독완시",
       "chars": [
         {
@@ -6325,6 +6524,7 @@ window.CHEONJAMUN_DATA = {
       "end": 792,
       "hanja": "寓目囊箱",
       "meaning": "",
+      "phraseMeaning": "왕총이 한번 읽으면 잊지 아니하여 글을 주머니나 상자에 둠과 같다고 하였다.",
       "reading": "우목낭상",
       "chars": [
         {
@@ -6357,6 +6557,7 @@ window.CHEONJAMUN_DATA = {
       "end": 796,
       "hanja": "易輶攸畏",
       "meaning": "",
+      "phraseMeaning": "매사를 소홀(疏忽)히 하고 경솔(輕率)함은 군자가 진실(眞實)로 두려워하는 바 이다.",
       "reading": "이유유외",
       "chars": [
         {
@@ -6389,6 +6590,7 @@ window.CHEONJAMUN_DATA = {
       "end": 800,
       "hanja": "屬耳垣牆",
       "meaning": "",
+      "phraseMeaning": "담장에도 귀가 있다는 말과 같이 경솔(輕率)히 말하는 것을 조심하라.",
       "reading": "속이원장",
       "chars": [
         {
@@ -6421,6 +6623,7 @@ window.CHEONJAMUN_DATA = {
       "end": 804,
       "hanja": "具膳餐飯",
       "meaning": "",
+      "phraseMeaning": "반찬(飯饌)을 갖추고 밥을 먹음.",
       "reading": "구선찬반",
       "chars": [
         {
@@ -6453,6 +6656,7 @@ window.CHEONJAMUN_DATA = {
       "end": 808,
       "hanja": "適口充腸",
       "meaning": "",
+      "phraseMeaning": "훌륭한 음식(飮食)이 아니라도 입에 맞으면 배를 채운다.",
       "reading": "적구충장",
       "chars": [
         {
@@ -6485,6 +6689,7 @@ window.CHEONJAMUN_DATA = {
       "end": 812,
       "hanja": "飽飫烹宰",
       "meaning": "",
+      "phraseMeaning": "배 부를 때에는 아무리 좋은 음식(飮食)이라도 그 맛을 모름른다.",
       "reading": "포어팽재",
       "chars": [
         {
@@ -6517,6 +6722,7 @@ window.CHEONJAMUN_DATA = {
       "end": 816,
       "hanja": "飢厭糟糠",
       "meaning": "",
+      "phraseMeaning": "반대로 배가 고플 때에는 겨와 재강도 맛있게 되는 것이다.",
       "reading": "기염조강",
       "chars": [
         {
@@ -6549,6 +6755,7 @@ window.CHEONJAMUN_DATA = {
       "end": 820,
       "hanja": "親戚故舊",
       "meaning": "",
+      "phraseMeaning": "친은 동성지친 이고 척은 이성지친 이요, 고구는 오랜 친구를 말한다.",
       "reading": "친척고구",
       "chars": [
         {
@@ -6581,6 +6788,7 @@ window.CHEONJAMUN_DATA = {
       "end": 824,
       "hanja": "老少異糧",
       "meaning": "",
+      "phraseMeaning": "늙은이와 젊은이의 식사가 다르니 노인에게는 연하고 영양이 많은 음식을 드려야 한다.",
       "reading": "로소이량",
       "chars": [
         {
@@ -6613,6 +6821,7 @@ window.CHEONJAMUN_DATA = {
       "end": 828,
       "hanja": "妾御績紡",
       "meaning": "",
+      "phraseMeaning": "남자는 밖에서 일하고, 여자는 안에서 길쌈을 해야 한다.",
       "reading": "첩어적방",
       "chars": [
         {
@@ -6645,6 +6854,7 @@ window.CHEONJAMUN_DATA = {
       "end": 832,
       "hanja": "待巾帷房",
       "meaning": "",
+      "phraseMeaning": "유방(帷房)에서 모시고 수건을 받드니 처첩(妻妾)이 하는 일이다.",
       "reading": "대건유방",
       "chars": [
         {
@@ -6677,6 +6887,7 @@ window.CHEONJAMUN_DATA = {
       "end": 836,
       "hanja": "紈扇圓潔",
       "meaning": "",
+      "phraseMeaning": "흰 비단(緋緞)으로 만든 부채는 둥글고 깨끗 하다.",
       "reading": "환선원결",
       "chars": [
         {
@@ -6709,6 +6920,7 @@ window.CHEONJAMUN_DATA = {
       "end": 840,
       "hanja": "銀燭煒煌",
       "meaning": "",
+      "phraseMeaning": "은촛대의 촛불은 빛나서 휘황찬란(輝煌燦爛) 하다.",
       "reading": "은촉위황",
       "chars": [
         {
@@ -6741,6 +6953,7 @@ window.CHEONJAMUN_DATA = {
       "end": 844,
       "hanja": "晝眠夕寐",
       "meaning": "",
+      "phraseMeaning": "낮에 낮잠 자고 밤에 일찍 자니 한가(閑暇)한 사람의 일이다.",
       "reading": "주면석매",
       "chars": [
         {
@@ -6773,6 +6986,7 @@ window.CHEONJAMUN_DATA = {
       "end": 848,
       "hanja": "藍筍象床",
       "meaning": "",
+      "phraseMeaning": "푸른 대순과 코끼리 침상이니, 즉 한가한 사람의 침대(寢臺) 이다.",
       "reading": "람순상상",
       "chars": [
         {
@@ -6805,6 +7019,7 @@ window.CHEONJAMUN_DATA = {
       "end": 852,
       "hanja": "弦歌酒宴",
       "meaning": "",
+      "phraseMeaning": "거문고를 타며 술과 노래로 잔치함.",
       "reading": "현가주연",
       "chars": [
         {
@@ -6837,6 +7052,7 @@ window.CHEONJAMUN_DATA = {
       "end": 856,
       "hanja": "接杯舉觴",
       "meaning": "",
+      "phraseMeaning": "작고 큰 술잔을 서로 주고받으며 즐기는 모습 이다.",
       "reading": "접배거상",
       "chars": [
         {
@@ -6869,6 +7085,7 @@ window.CHEONJAMUN_DATA = {
       "end": 860,
       "hanja": "矯手頓足",
       "meaning": "",
+      "phraseMeaning": "손을 들고 발을 두드리며 춤을 춤.",
       "reading": "교수돈족",
       "chars": [
         {
@@ -6901,6 +7118,7 @@ window.CHEONJAMUN_DATA = {
       "end": 864,
       "hanja": "悅豫且康",
       "meaning": "",
+      "phraseMeaning": "이상(以上)과 같이 마음 편히 즐기고 살면 평안하고 기쁜 삶이다.",
       "reading": "열예차강",
       "chars": [
         {
@@ -6933,6 +7151,7 @@ window.CHEONJAMUN_DATA = {
       "end": 868,
       "hanja": "嫡後嗣續",
       "meaning": "",
+      "phraseMeaning": "적자(嫡子)된 자, 즉 장남은 뒤를 계승(繼承)하여 대를 이어야 함.",
       "reading": "적후사속",
       "chars": [
         {
@@ -6965,6 +7184,7 @@ window.CHEONJAMUN_DATA = {
       "end": 872,
       "hanja": "祭祀烝嘗",
       "meaning": "",
+      "phraseMeaning": "제사하되 겨울 제사는 증(蒸)이라 하고 가을 제사는 상(嘗)이라 한다.",
       "reading": "제사증상",
       "chars": [
         {
@@ -6997,6 +7217,7 @@ window.CHEONJAMUN_DATA = {
       "end": 876,
       "hanja": "稽顙再拜",
       "meaning": "",
+      "phraseMeaning": "이마를 조아려 선조(先祖)에게 두 번 절함.",
       "reading": "계상재배",
       "chars": [
         {
@@ -7029,6 +7250,7 @@ window.CHEONJAMUN_DATA = {
       "end": 880,
       "hanja": "悚懼恐惶",
       "meaning": "",
+      "phraseMeaning": "송구하고 공황하니 엄중(嚴重), 공경(恭敬)함이 지극(至極)함.(3년상 이후의 제사 때의 몸가짐.)",
       "reading": "송구공황",
       "chars": [
         {
@@ -7061,6 +7283,7 @@ window.CHEONJAMUN_DATA = {
       "end": 884,
       "hanja": "箋牒簡要",
       "meaning": "",
+      "phraseMeaning": "글과 편지(便紙)는 간략(簡略)함을 요한다.",
       "reading": "전첩간요",
       "chars": [
         {
@@ -7093,6 +7316,7 @@ window.CHEONJAMUN_DATA = {
       "end": 888,
       "hanja": "顧答審詳",
       "meaning": "",
+      "phraseMeaning": "편지의 회답(回答)도 자세(仔細)히 살펴 써야 한다.",
       "reading": "고답심상",
       "chars": [
         {
@@ -7125,6 +7349,7 @@ window.CHEONJAMUN_DATA = {
       "end": 892,
       "hanja": "骸垢想浴",
       "meaning": "",
+      "phraseMeaning": "몸에 때가 끼면 목욕(沐浴)하기를 생각 한다.",
       "reading": "해구상욕",
       "chars": [
         {
@@ -7157,6 +7382,7 @@ window.CHEONJAMUN_DATA = {
       "end": 896,
       "hanja": "執熱願涼",
       "meaning": "",
+      "phraseMeaning": "더우면 서늘하기를 원한다.",
       "reading": "집열원량",
       "chars": [
         {
@@ -7189,6 +7415,7 @@ window.CHEONJAMUN_DATA = {
       "end": 900,
       "hanja": "驢騾犢特",
       "meaning": "",
+      "phraseMeaning": "나귀와 노새와 송아지, 즉 가축(家畜)을 말한다.",
       "reading": "려라독특",
       "chars": [
         {
@@ -7221,6 +7448,7 @@ window.CHEONJAMUN_DATA = {
       "end": 904,
       "hanja": "駭躍超驤",
       "meaning": "",
+      "phraseMeaning": "뛰고 달리며 노는 가축의 모습을 말한다.",
       "reading": "해약초양",
       "chars": [
         {
@@ -7253,6 +7481,7 @@ window.CHEONJAMUN_DATA = {
       "end": 908,
       "hanja": "誅斬賊盜",
       "meaning": "",
+      "phraseMeaning": "역적(逆賊)과 도적(盜賊)을 베어 물리침.",
       "reading": "주참적도",
       "chars": [
         {
@@ -7285,6 +7514,7 @@ window.CHEONJAMUN_DATA = {
       "end": 912,
       "hanja": "捕獲叛亡",
       "meaning": "",
+      "phraseMeaning": "배반(背反)하고 도망(逃亡)하는 자를 잡아 죄를 다스림.",
       "reading": "포획반망",
       "chars": [
         {
@@ -7317,6 +7547,7 @@ window.CHEONJAMUN_DATA = {
       "end": 916,
       "hanja": "布射僚丸",
       "meaning": "",
+      "phraseMeaning": "한나라 여포(呂布)는 화살을 잘 쐈고, 웅의료(熊宜僚)는 탄자(彈子)를 잘 던졌다.",
       "reading": "포사료환",
       "chars": [
         {
@@ -7349,6 +7580,7 @@ window.CHEONJAMUN_DATA = {
       "end": 920,
       "hanja": "嵇琴阮嘯",
       "meaning": "",
+      "phraseMeaning": "위나라 혜강(嵇康)은 거문고를 잘 타고, 완적(玩籍)은 휘파람을 잘 불었다.",
       "reading": "혜금완소",
       "chars": [
         {
@@ -7381,6 +7613,7 @@ window.CHEONJAMUN_DATA = {
       "end": 924,
       "hanja": "恬筆倫紙",
       "meaning": "",
+      "phraseMeaning": "진나라 몽염은 토끼털로 처음 붓을 만들었고, 후한의채륜은 처음 종이를 만들었다.",
       "reading": "념필륜지",
       "chars": [
         {
@@ -7413,6 +7646,7 @@ window.CHEONJAMUN_DATA = {
       "end": 928,
       "hanja": "鈞巧任釣",
       "meaning": "",
+      "phraseMeaning": "위나라 마균은 지남거(指南車)를 만들고, 전국시대임공자는 낚시를 만들었다.",
       "reading": "균교임조",
       "chars": [
         {
@@ -7445,6 +7679,7 @@ window.CHEONJAMUN_DATA = {
       "end": 932,
       "hanja": "釋紛利俗",
       "meaning": "",
+      "phraseMeaning": "이상8인의 재주를 다하여 어지러움을 풀어 풍속(風俗)에 이롭게 했다.",
       "reading": "석분리속",
       "chars": [
         {
@@ -7477,6 +7712,7 @@ window.CHEONJAMUN_DATA = {
       "end": 936,
       "hanja": "竝皆佳妙",
       "meaning": "",
+      "phraseMeaning": "모두가 아름다우며 묘한 재주 이다.",
       "reading": "병개가묘",
       "chars": [
         {
@@ -7509,6 +7745,7 @@ window.CHEONJAMUN_DATA = {
       "end": 940,
       "hanja": "毛施淑姿",
       "meaning": "",
+      "phraseMeaning": "모는 오나라 모타라는 여자이고, 시는 월나라 서시 라는 여자인데, 모두 절세미인 이였다.",
       "reading": "모시숙자",
       "chars": [
         {
@@ -7541,6 +7778,7 @@ window.CHEONJAMUN_DATA = {
       "end": 944,
       "hanja": "工顰妍笑",
       "meaning": "",
+      "phraseMeaning": "웃는 모습이 매우 곱고 아름다워 찌푸린 얼굴조차 보통 여인이 흉내낼 정도였다.",
       "reading": "공빈연소",
       "chars": [
         {
@@ -7573,6 +7811,7 @@ window.CHEONJAMUN_DATA = {
       "end": 948,
       "hanja": "年矢每催",
       "meaning": "",
+      "phraseMeaning": "세월은 화살같이 매양 재촉하니, 즉 세월이 빠른 것을 말한다.",
       "reading": "년시매최",
       "chars": [
         {
@@ -7605,6 +7844,7 @@ window.CHEONJAMUN_DATA = {
       "end": 952,
       "hanja": "曦暉朗曜",
       "meaning": "",
+      "phraseMeaning": "태양빛과 달빛은 온 세상을 비추어 만물에 혜택(惠澤)을 주고 있다.(曦→羲, 曜→耀로 쓰기도 함)",
       "reading": "희휘랑요",
       "chars": [
         {
@@ -7637,6 +7877,7 @@ window.CHEONJAMUN_DATA = {
       "end": 956,
       "hanja": "璿璣懸斡",
       "meaning": "",
+      "phraseMeaning": "선기는 천기를 보는 기구이고, 그 기구가 높이 걸려 도는 것을 말한다.",
       "reading": "선기현알",
       "chars": [
         {
@@ -7669,6 +7910,7 @@ window.CHEONJAMUN_DATA = {
       "end": 960,
       "hanja": "晦魄環照",
       "meaning": "",
+      "phraseMeaning": "달은 그믐이 되면 빛이 없어졌다가 보름이 되면 밝게 빛나서 천지를 비춘다.",
       "reading": "회백환조",
       "chars": [
         {
@@ -7701,6 +7943,7 @@ window.CHEONJAMUN_DATA = {
       "end": 964,
       "hanja": "指薪修祜",
       "meaning": "",
+      "phraseMeaning": "불타는 나무와 같이 정열(情熱)로 도리(道理)를 닦으면 복(福)을 얻는다.",
       "reading": "지신수호",
       "chars": [
         {
@@ -7733,6 +7976,7 @@ window.CHEONJAMUN_DATA = {
       "end": 968,
       "hanja": "永綏吉劭",
       "meaning": "",
+      "phraseMeaning": "그리고 영구(永久)히 편안(便安)하고 길함이 높다.",
       "reading": "영수길소",
       "chars": [
         {
@@ -7765,6 +8009,7 @@ window.CHEONJAMUN_DATA = {
       "end": 972,
       "hanja": "矩步引領",
       "meaning": "",
+      "phraseMeaning": "걸음을 바로 걷고 따라서 얼굴도 바르니 위의(威儀)가 당당 하다.",
       "reading": "구보인령",
       "chars": [
         {
@@ -7797,6 +8042,7 @@ window.CHEONJAMUN_DATA = {
       "end": 976,
       "hanja": "俯仰廊廟",
       "meaning": "",
+      "phraseMeaning": "항상(恒常) 낭묘(廊廟)에 있는 것으로 생각하고 머리를 숙여 예의(禮儀)를 지켜야 한다.",
       "reading": "부앙랑묘",
       "chars": [
         {
@@ -7829,6 +8075,7 @@ window.CHEONJAMUN_DATA = {
       "end": 980,
       "hanja": "束帶矜庄",
       "meaning": "",
+      "phraseMeaning": "의복(衣服)에 주의(注意)하여 단정(端正)히 함으로써 긍지(矜持)를 갖음춤.",
       "reading": "속대긍장",
       "chars": [
         {
@@ -7861,6 +8108,7 @@ window.CHEONJAMUN_DATA = {
       "end": 984,
       "hanja": "徘徊瞻眺",
       "meaning": "",
+      "phraseMeaning": "같은 장소를 배회(徘徊)하며 선후(先後)를 보는 모양(模樣).",
       "reading": "배회첨조",
       "chars": [
         {
@@ -7893,6 +8141,7 @@ window.CHEONJAMUN_DATA = {
       "end": 988,
       "hanja": "孤陋寡聞",
       "meaning": "",
+      "phraseMeaning": "하등(下等)의 식견(識見)도 재능(才能)도 없음 (천자문 저자 자신을 겸손해서 말한 것)",
       "reading": "고루과문",
       "chars": [
         {
@@ -7925,6 +8174,7 @@ window.CHEONJAMUN_DATA = {
       "end": 992,
       "hanja": "愚蒙等誚",
       "meaning": "",
+      "phraseMeaning": "적고 어리석어 몽매(蒙昧)함을 면치 못한다는 것을 말함.",
       "reading": "우몽등초",
       "chars": [
         {
@@ -7957,6 +8207,7 @@ window.CHEONJAMUN_DATA = {
       "end": 996,
       "hanja": "謂語助者",
       "meaning": "",
+      "phraseMeaning": "어조(語助)라 함은 한문(漢文)의 조사(助辭), 즉 다음의 4글자 이다.",
       "reading": "위어조자",
       "chars": [
         {
@@ -7989,6 +8240,7 @@ window.CHEONJAMUN_DATA = {
       "end": 1000,
       "hanja": "焉哉乎也",
       "meaning": "",
+      "phraseMeaning": "\"언재호야(焉哉乎也)\". 이 네 글자는 어조사(語助辭)이다.",
       "reading": "언재호야",
       "chars": [
         {

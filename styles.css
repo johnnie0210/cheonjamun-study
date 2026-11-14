@@ -158,6 +158,13 @@ body { overscroll-behavior-y: none; }
   margin-top: 14px; font-size: 15px; line-height: 1.6; text-align: center;
   color: var(--ink); white-space: pre-line;
 }
+.card-meaning-label {
+  margin-top: 12px; font-size: 11px; font-weight: 700; color: var(--accent);
+  background: #faf3e6; padding: 4px 9px; border-radius: 999px;
+}
+.card-meaning-label:empty { display: none; }
+.card-meaning-label + .card-meaning { margin-top: 8px; }
+.card-meaning.phrase { font-size: 14px; line-height: 1.55; }
 .card-chars {
   margin-top: auto; padding-top: 16px; width: 100%;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
