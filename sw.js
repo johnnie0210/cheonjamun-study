@@ -4,7 +4,7 @@
  *  - 아이콘 등 정적 자원: cache-first
  * => 엑셀을 고쳐 data.js 를 다시 올려도 설치된 앱이 자동으로 최신 내용을 받습니다.
  */
-const CACHE = 'cheonjamun-study-v3';
+const CACHE = 'cheonjamun-study-v4';
 const ASSETS = [
   './',
   './index.html',
