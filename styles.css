@@ -174,8 +174,13 @@ body { overscroll-behavior-y: none; }
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
 }
 .card-chars .cc {
-  background: var(--surface-2); border-radius: 10px; padding: 7px 4px; text-align: center;
+  background: var(--surface-2); border: 0; border-radius: 10px; padding: 7px 4px; text-align: center;
+  font: inherit; color: inherit; cursor: pointer; -webkit-appearance: none; appearance: none;
+  transition: background .15s, transform .12s;
 }
+.card-chars .cc:hover { background: #e7e0d2; }
+.card-chars .cc:active { transform: scale(.97); }
+.card-chars .cc:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .card-chars .cc b {
   display: block; font-size: 20px; font-family: "Noto Serif KR", "Batang", serif; font-weight: 700;
 }

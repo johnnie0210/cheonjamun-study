@@ -172,7 +172,7 @@
     cardRange = fillRangeSelect($('card-range'), rangeOptions(cardDeckName), cardRange);
   }
 
-  function buildCardList() {
+  function buildCardList(focusKey) {
     let base = (decks[cardDeckName] || []).slice();
     if (cardRange !== 'all') {
       const parts = cardRange.split('-').map(Number);
@@ -184,6 +184,10 @@
     cardList = base;
     applyCardOrder();
     cardIndex = 0;
+    if (focusKey) {
+      const pos = order.findIndex((i) => cardList[i].key === focusKey);
+      if (pos >= 0) cardIndex = pos;
+    }
     showCard();
   }
   function applyCardOrder() {
@@ -192,6 +196,24 @@
     cardIndex = 0;
   }
   function currentCard() { return cardList[order[cardIndex]]; }
+
+  function goToCharCard(hanja) {
+    const target = charCards.find((c) => c.hanja === hanja);
+    if (!target || !target.first) {
+      toast('개별 한자 카드를 찾을 수 없습니다.');
+      return;
+    }
+    const totalChars = DATA.counts.totalChars || DATA.counts.characters || charCards.length;
+    const start = Math.floor((target.first - 1) / CHAR_STEP) * CHAR_STEP + 1;
+    const end = Math.min(start + CHAR_STEP - 1, totalChars);
+    cardDeckName = 'char';
+    cardRange = start + '-' + end;
+    document.querySelectorAll('#card-deck-seg .seg-btn').forEach((b) => {
+      b.classList.toggle('active', b.dataset.deck === 'char');
+    });
+    updateCardRange();
+    buildCardList(target.key);
+  }
 
   function showCard() {
     const c = currentCard();
@@ -231,10 +253,13 @@
         c.usedWords.map((w) => '<span class="uw">' + esc(w) + '</span>').join('');
     } else {
       cc.className = 'card-chars';
-      cc.innerHTML = (c.chars || []).map((ch) =>
-        '<div class="cc"><b>' + esc(ch.hanja) + '</b><span>' + esc(ch.reading) +
-        (ch.meaning ? ' ' + esc(ch.meaning) : '') + '</span></div>'
-      ).join('');
+      cc.innerHTML = (c.chars || []).map((ch) => {
+        const label = ch.hanja + ' ' + ch.reading + (ch.meaning ? ' ' + ch.meaning : '');
+        return '<button type="button" class="cc" data-hanja="' + esc(ch.hanja) +
+          '" title="개별 한자 카드로 이동" aria-label="' + esc(label + ' 개별 한자 카드로 이동') +
+          '"><b>' + esc(ch.hanja) + '</b><span>' + esc(ch.reading) +
+          (ch.meaning ? ' ' + esc(ch.meaning) : '') + '</span></button>';
+      }).join('');
     }
 
     $('card-progress-text').textContent = (cardIndex + 1) + ' / ' + cardList.length;
@@ -271,6 +296,12 @@
       : '';
   }
 
+  $('card-back-chars').addEventListener('click', (e) => {
+    const chip = e.target.closest('.cc[data-hanja]');
+    if (!chip) return;
+    e.stopPropagation();
+    goToCharCard(chip.dataset.hanja);
+  });
   $('flip-card').addEventListener('click', flipCard);
   $('btn-stroke').addEventListener('click', (e) => {
     e.stopPropagation();
