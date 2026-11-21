@@ -67,7 +67,7 @@
               <div class="card-reading" id="card-back-reading"></div>
               <div class="card-meaning-label" id="card-back-meaning-label"></div>
               <div class="card-meaning" id="card-back-meaning"></div>
-              <button class="stroke-btn" id="btn-stroke" type="button" aria-label="한자우에서 획순 보기 (새 탭)">획순 ↗</button>
+              <button class="stroke-btn" id="btn-stroke" type="button" aria-label="획순 보기">획순</button>
               <div class="card-chars" id="card-back-chars"></div>
             </div>
           </div>
@@ -177,6 +177,30 @@
     <button class="tab" data-tab="list"><span class="tab-ic">📖</span>목록</button>
   </nav>
 
+</div>
+
+<!-- 획순 시트 -->
+<div class="sheet-backdrop hidden" id="stroke-backdrop">
+  <div class="sheet stroke-sheet" role="dialog" aria-modal="true" aria-labelledby="stroke-title">
+    <div class="sheet-handle"></div>
+    <button class="sheet-close" id="stroke-close" type="button" aria-label="닫기">×</button>
+    <h2 id="stroke-title">획순</h2>
+    <div class="stroke-sub" id="stroke-sub"></div>
+    <div class="stroke-chars" id="stroke-chars"></div>
+    <div class="stroke-stage">
+      <div id="stroke-writer"></div>
+      <div class="stroke-empty hidden" id="stroke-empty">
+        <div class="stroke-empty-char" id="stroke-empty-char"></div>
+        <p>이 글자의 획순 데이터는 아직 없어요.</p>
+      </div>
+    </div>
+    <div class="stroke-controls">
+      <button class="ctrl" id="stroke-replay" type="button">▶ 다시 보기</button>
+      <button class="ctrl" id="stroke-trace" type="button">✍️ 따라쓰기</button>
+      <button class="ctrl" id="stroke-reset" type="button">↺ 지우기</button>
+    </div>
+    <p class="sheet-note">획순 데이터: Make Me a Hanzi · 애니메이션: Hanzi Writer</p>
+  </div>
 </div>
 
 <!-- 정보/설정 시트 -->

@@ -41,19 +41,192 @@
     toastTimer = setTimeout(() => t.classList.add('hidden'), 1800);
   }
 
-  /* ================= 획순 ================= */
-  const STROKE_BASE = 'https://www.hanziwu.com/ko/search?q=';
-  const STROKE_MISSING = new Set('凊磻寔俶輶煒竝璿');
+  /* ================= 획순 (앱 내부) ================= */
+  const charInfo = new Map(DATA.characters.map((c) => [c.hanja, c]));
+  const strokeData = () => window.STROKE_DATA || {};
 
-  function openStrokeOrder(hanja) {
-    if (!hanja) return;
-    if (hanja.length === 1 && STROKE_MISSING.has(hanja)) {
-      toast('이 글자는 한자우에 획순 데이터가 없습니다.');
-      return;
-    }
-    const url = STROKE_BASE + encodeURIComponent(hanja);
-    window.open(url, '_blank', 'noopener,noreferrer');
+  let strokeWriter = null;
+  let strokeCurrent = '';
+  let strokeChars = [];
+  let strokeQuizMode = false;
+  let strokeAutoPlay = true;
+  let strokeLastFocus = null;
+  let strokeOpenToken = 0;
+  let strokeAssetsPromise = null;
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const el = document.createElement('script');
+      el.src = src;
+      el.onload = resolve;
+      el.onerror = () => reject(new Error('load failed: ' + src));
+      document.head.appendChild(el);
+    });
   }
+
+  function loadStrokeAssets() {
+    if (!strokeAssetsPromise) {
+      strokeAssetsPromise = Promise.all([
+        loadScript('vendor/hanzi-writer.min.js'),
+        loadScript('stroke-data.js'),
+      ]).catch((e) => { strokeAssetsPromise = null; throw e; });
+    }
+    return strokeAssetsPromise;
+  }
+
+  function openStrokeOrder(card) {
+    if (!card) return;
+    const chars = (card.chars && card.chars.length)
+      ? uniq(card.chars.map((ch) => ch.hanja || ch).filter(Boolean))
+      : [card.hanja];
+    strokeChars = chars.length ? chars : [card.hanja].filter(Boolean);
+    if (!strokeChars.length) return;
+
+    const token = ++strokeOpenToken;
+    strokeCurrent = strokeChars[0];
+    strokeLastFocus = document.activeElement;
+    $('stroke-title').textContent = strokeCurrent + ' 획순';
+    const openInfo = charInfo.get(strokeCurrent);
+    $('stroke-sub').textContent = openInfo
+      ? [openInfo.readings.join(' · '), openInfo.meanings.join(', ')].filter(Boolean).join('  |  ')
+      : '';
+    $('stroke-chars').innerHTML = strokeChars.length > 1
+      ? strokeChars.map((ch) => '<button type="button" class="stroke-char-btn' +
+          (ch === strokeCurrent ? ' active' : '') + '" data-hanja="' + esc(ch) +
+          '" aria-label="' + esc(ch) + ' 획순 보기">' + esc(ch) + '</button>').join('')
+      : '';
+    $('stroke-writer').innerHTML = '<div class="stroke-loading">획순 불러오는 중…</div>';
+    $('stroke-writer').classList.remove('hidden');
+    $('stroke-empty').classList.add('hidden');
+    updateStrokeButtons(false);
+    $('stroke-backdrop').classList.remove('hidden');
+    $('stroke-close').focus();
+
+    loadStrokeAssets().then(() => {
+      if (token === strokeOpenToken && !$('stroke-backdrop').classList.contains('hidden')) {
+        renderStrokeChar(strokeCurrent);
+      }
+    }).catch(() => {
+      if (token === strokeOpenToken && !$('stroke-backdrop').classList.contains('hidden')) {
+        $('stroke-writer').innerHTML = '<div class="stroke-loading">획순 데이터를 불러오지 못했어요.</div>';
+      }
+    });
+  }
+
+  function closeStroke() {
+    $('stroke-backdrop').classList.add('hidden');
+    if (strokeWriter) {
+      try { strokeWriter.cancelQuiz(); } catch (e) {}
+    }
+    strokeQuizMode = false;
+    if (strokeLastFocus && strokeLastFocus.focus) strokeLastFocus.focus();
+  }
+
+  function renderStrokeChar(hanja) {
+    if (strokeWriter) {
+      try { strokeWriter.cancelQuiz(); } catch (e) {}
+    }
+    strokeCurrent = hanja;
+    strokeQuizMode = false;
+
+    const info = charInfo.get(hanja);
+    $('stroke-title').textContent = hanja + ' 획순';
+    $('stroke-sub').textContent = info
+      ? [info.readings.join(' · '), info.meanings.join(', ')].filter(Boolean).join('  |  ')
+      : '';
+
+    $('stroke-chars').innerHTML = strokeChars.length > 1
+      ? strokeChars.map((ch) => '<button type="button" class="stroke-char-btn' +
+          (ch === hanja ? ' active' : '') + '" data-hanja="' + esc(ch) +
+          '" aria-label="' + esc(ch) + ' 획순 보기">' + esc(ch) + '</button>').join('')
+      : '';
+
+    const hasData = !!strokeData()[hanja];
+    $('stroke-writer').classList.toggle('hidden', !hasData);
+    $('stroke-empty').classList.toggle('hidden', hasData);
+    $('stroke-empty-char').textContent = hasData ? '' : hanja;
+    updateStrokeButtons(hasData);
+
+    const mount = $('stroke-writer');
+    mount.innerHTML = '';
+    strokeWriter = null;
+    if (!hasData || typeof window.HanziWriter === 'undefined') return;
+
+    const size = Math.max(200, Math.min(280, (mount.parentElement.clientWidth || 320) - 32));
+    strokeAutoPlay = true;
+    const writer = HanziWriter.create(mount, hanja, {
+      width: size,
+      height: size,
+      padding: 12,
+      showOutline: true,
+      strokeAnimationSpeed: 1,
+      delayBetweenStrokes: 180,
+      charDataLoader: (ch) => strokeData()[ch] || null,
+      onLoadCharDataSuccess: () => {
+        if (strokeAutoPlay && strokeWriter === writer) writer.animateCharacter();
+      },
+      onLoadCharDataError: () => toast('획순 데이터를 불러오지 못했어요.'),
+    });
+    strokeWriter = writer;
+  }
+
+  function updateStrokeButtons(hasData) {
+    $('stroke-replay').disabled = !hasData || strokeQuizMode;
+    $('stroke-trace').disabled = !hasData;
+    $('stroke-reset').disabled = !hasData;
+    $('stroke-trace').textContent = strokeQuizMode ? '✓ 퀴즈 종료' : '✍️ 따라쓰기';
+    $('stroke-trace').classList.toggle('active', strokeQuizMode);
+  }
+
+  function toggleStrokeQuiz() {
+    if (!strokeWriter) return;
+    if (strokeQuizMode) {
+      strokeAutoPlay = false;
+      strokeWriter.cancelQuiz();
+      strokeWriter.setCharacter(strokeCurrent);
+      strokeQuizMode = false;
+    } else {
+      try {
+        strokeQuizMode = true;
+        strokeWriter.quiz({
+          onComplete: () => {
+            toast('잘했어요! 🎉');
+            strokeQuizMode = false;
+            updateStrokeButtons(true);
+            if (strokeWriter) strokeWriter.animateCharacter();
+          },
+        });
+      } catch (e) {
+        strokeQuizMode = false;
+        toast('아직 획순을 불러오는 중이에요.');
+      }
+    }
+    updateStrokeButtons(!!strokeData()[strokeCurrent]);
+  }
+
+  $('stroke-close').addEventListener('click', closeStroke);
+  $('stroke-backdrop').addEventListener('click', (e) => {
+    if (e.target === $('stroke-backdrop')) closeStroke();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !$('stroke-backdrop').classList.contains('hidden')) closeStroke();
+  });
+  $('stroke-chars').addEventListener('click', (e) => {
+    const btn = e.target.closest('.stroke-char-btn[data-hanja]');
+    if (btn) renderStrokeChar(btn.dataset.hanja);
+  });
+  $('stroke-replay').addEventListener('click', () => {
+    if (strokeWriter && !strokeQuizMode) strokeWriter.animateCharacter();
+  });
+  $('stroke-trace').addEventListener('click', toggleStrokeQuiz);
+  $('stroke-reset').addEventListener('click', () => {
+    if (!strokeWriter) return;
+    try { strokeWriter.cancelQuiz(); } catch (e) {}
+    strokeQuizMode = false;
+    strokeAutoPlay = false;
+    strokeWriter.setCharacter(strokeCurrent);
+    updateStrokeButtons(!!strokeData()[strokeCurrent]);
+  });
 
   /* ================= 카드 아이템 구성 ================= */
   const entryById = new Map(DATA.entries.map((e) => [e.id, e]));
@@ -233,7 +406,7 @@
       return;
     }
     $('btn-stroke').disabled = false;
-    $('btn-stroke').setAttribute('aria-label', c.hanja + ' 획순 보기 (새 탭)');
+    $('btn-stroke').setAttribute('aria-label', c.hanja + ' 획순 보기');
     $('card-front-type').textContent = c.typeLabel;
     $('card-front-hanja').textContent = c.hanja;
     $('card-back-type').textContent = c.typeLabel;
@@ -305,8 +478,7 @@
   $('flip-card').addEventListener('click', flipCard);
   $('btn-stroke').addEventListener('click', (e) => {
     e.stopPropagation();
-    const c = currentCard();
-    if (c) openStrokeOrder(c.hanja);
+    openStrokeOrder(currentCard());
   });
   $('btn-flip').addEventListener('click', flipCard);
   $('btn-next').addEventListener('click', nextCard);

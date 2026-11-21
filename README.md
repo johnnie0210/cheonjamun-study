@@ -13,7 +13,10 @@
   - 범위 선택: 구절은 25개씩, 개별 한자는 100자씩
   - 섞기, 좌우 스와이프, 진행률 표시
   - 구절 카드 뒤의 구성 한자를 누르면 해당 개별 한자 카드로 이동
-  - 카드 뒤 `획순` 버튼: 한자우(hanziwu.com) 새 탭에서 획순 보기 (인터넷 필요)
+  - 카드 뒤 `획순` 버튼: **앱 안에서** 획순 애니메이션 보기 (인터넷·광고 없음, 오프라인 가능)
+    - 구절 카드는 글자별로 골라 볼 수 있습니다.
+    - `다시 보기`, `따라쓰기`(획순 퀴즈), `지우기` 지원
+    - 획순 데이터가 없는 6자(凊·磻·俶·輶·煒·璿)는 안내 문구가 표시됩니다.
 - **❓ 퀴즈** — 3가지 유형 × 3가지 범위
   - 유형: 한자→음, 한자→뜻, 음→한자
   - 범위: 천자문 구절 / 개별 한자 / 전체
@@ -33,6 +36,10 @@ cheonjamun-app/
 ├─ styles.css              스타일
 ├─ app.js                  앱 로직
 ├─ data.js                 ← 엑셀에서 자동 생성 (직접 수정 금지)
+├─ stroke-data.js          ← 획순 데이터 자동 생성 (직접 수정 금지)
+├─ vendor/
+│  └─ hanzi-writer.min.js  획순 애니메이션 라이브러리
+├─ licenses/               데이터·라이브러리 라이선스
 ├─ 천자문.xlsx             공부할 원본 엑셀 (한자·독음)
 ├─ 천자문_구절.xlsx        구절 뜻 원본 엑셀
 ├─ manifest.webmanifest    PWA 설정
@@ -42,8 +49,22 @@ cheonjamun-app/
 │  └─ update-data.yml      엑셀 업로드 시 data.js 자동 생성
 └─ build/
    ├─ parse-xlsx.mjs       엑셀 → data.js 변환
+   ├─ make-stroke-data.mjs 획순 데이터 → stroke-data.js 생성
    └─ package.json
 ```
+
+## 획순 데이터 출처
+
+앱 안에서 보여 주는 획순은 아래 공개 데이터로 만들어졌으며, 모두 앱에 포함되어 있어
+외부 사이트에 접속하거나 광고를 볼 필요가 없습니다.
+
+- 획순 데이터: [hanzi-writer-data](https://www.npmjs.com/package/hanzi-writer-data) /
+  [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) (Arphic Public License)
+- 일부 누락 글자 보충: [hanzi-writer-data-jp](https://www.npmjs.com/package/@k1low/hanzi-writer-data-jp) (animCJK 유래)
+- 애니메이션: [Hanzi Writer](https://github.com/chanind/hanzi-writer) (MIT)
+
+라이선스 원문은 `licenses/` 폴더에 있습니다. 데이터를 다시 만들려면 `build`에서
+`node make-stroke-data.mjs`를 실행하세요. (최초 실행 시 인터넷 연결 필요)
 
 ## 엑셀만 올리면 자동 반영 (GitHub)
 

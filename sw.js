@@ -1,16 +1,18 @@
 /* 천자문 공부 — 서비스 워커
  * 전략
  *  - 앱 파일(index/app/styles/data 등): network-first → 최신 내용 우선, 오프라인이면 캐시
- *  - 아이콘 등 정적 자원: cache-first
+ *  - 아이콘·획순 데이터·라이브러리: cache-first (용량이 크고 자주 바뀌지 않음)
  * => 엑셀을 고쳐 data.js 를 다시 올려도 설치된 앱이 자동으로 최신 내용을 받습니다.
  */
-const CACHE = 'cheonjamun-study-v6';
+const CACHE = 'cheonjamun-study-v7';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
   './data.js',
+  './stroke-data.js',
+  './vendor/hanzi-writer.min.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -38,9 +40,10 @@ self.addEventListener('fetch', (e) => {
   if (url.origin !== self.location.origin) return; // 외부 요청은 그대로
 
   const isApp = req.mode === 'navigate' || /\.(html|js|css|webmanifest)$/.test(url.pathname);
-  const isIcon = url.pathname.includes('/icons/');
+  const isStatic = url.pathname.includes('/icons/') ||
+    url.pathname.includes('/vendor/') || url.pathname.endsWith('/stroke-data.js');
 
-  if (isApp && !isIcon) {
+  if (isApp && !isStatic) {
     // network-first
     e.respondWith(
       fetch(req)
@@ -56,7 +59,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // 그 외(아이콘 등): cache-first
+  // 그 외(아이콘·획순 데이터 등): cache-first
   e.respondWith(
     caches.match(req).then((cached) => cached || fetch(req).then((res) => {
       if (res && res.ok) {
