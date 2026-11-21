@@ -4,7 +4,7 @@
  *  - 아이콘·획순 데이터·라이브러리: cache-first (용량이 크고 자주 바뀌지 않음)
  * => 엑셀을 고쳐 data.js 를 다시 올려도 설치된 앱이 자동으로 최신 내용을 받습니다.
  */
-const CACHE = 'cheonjamun-study-v7';
+const CACHE = 'cheonjamun-study-v8';
 const ASSETS = [
   './',
   './index.html',

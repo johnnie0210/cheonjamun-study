@@ -16,7 +16,7 @@
   - 카드 뒤 `획순` 버튼: **앱 안에서** 획순 애니메이션 보기 (인터넷·광고 없음, 오프라인 가능)
     - 구절 카드는 글자별로 골라 볼 수 있습니다.
     - `다시 보기`, `따라쓰기`(획순 퀴즈), `지우기` 지원
-    - 획순 데이터가 없는 6자(凊·磻·俶·輶·煒·璿)는 안내 문구가 표시됩니다.
+    - 획순 데이터가 없는 5자(凊·磻·輶·煒·璿)는 안내 문구가 표시됩니다.
 - **❓ 퀴즈** — 3가지 유형 × 3가지 범위
   - 유형: 한자→음, 한자→뜻, 음→한자
   - 범위: 천자문 구절 / 개별 한자 / 전체
@@ -61,6 +61,7 @@ cheonjamun-app/
 - 획순 데이터: [hanzi-writer-data](https://www.npmjs.com/package/hanzi-writer-data) /
   [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) (Arphic Public License)
 - 일부 누락 글자 보충: [hanzi-writer-data-jp](https://www.npmjs.com/package/@k1low/hanzi-writer-data-jp) (animCJK 유래)
+- `俶` 1자 보충: [animCJK](https://github.com/parsimonhi/animCJK) (Arphic Public License, SVG를 Hanzi Writer 형식으로 변환)
 - 애니메이션: [Hanzi Writer](https://github.com/chanind/hanzi-writer) (MIT)
 
 라이선스 원문은 `licenses/` 폴더에 있습니다. 데이터를 다시 만들려면 `build`에서

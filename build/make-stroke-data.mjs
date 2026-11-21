@@ -7,6 +7,8 @@
  *    https://github.com/skishore/makemeahanzi
  *  - hanzi-writer-data-jp (일부 누락 글자 보충, animCJK 유래)
  *    https://www.npmjs.com/package/@k1low/hanzi-writer-data-jp
+ *  - animCJK (누락 글자 俶 보충, Arphic Public License)
+ *    https://github.com/parsimonhi/animCJK
  *
  * 실행: cd build && node make-stroke-data.mjs
  * (처음 실행 시 npm tarball / graphics.txt 를 내려받아 임시 폴더에 압축 해제합니다.)
@@ -21,6 +23,11 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const TMP = path.join(os.tmpdir(), 'cheonjamun-stroke-build');
 const OUT = path.join(ROOT, 'stroke-data.js');
+
+// animCJK는 SVG 파일명이 유니코드 10진수라 글자별 주소를 직접 지정합니다.
+const ANIMCJK_FILES = {
+  '俶': 'https://raw.githubusercontent.com/parsimonhi/animCJK/master/svgsJa/20470.svg',
+};
 
 const SOURCES = {
   hwd: {
@@ -96,6 +103,38 @@ function loadGraphics(file) {
   return map;
 }
 
+// animCJK SVG → Hanzi Writer 형식 (strokes/medians).
+// viewBox가 1024×1024이라 좌표 변환이 필요 없고, 중심선은 M/L만 사용합니다.
+function parseAnimCjkSvg(svg) {
+  const strokes = [];
+  for (const m of svg.matchAll(/<path id="z\d+d(\d+)" d="([^"]+)"/g)) {
+    strokes.push({ n: Number(m[1]), d: m[2] });
+  }
+
+  const medians = [];
+  for (const m of svg.matchAll(/<path\b[^>]*>/g)) {
+    const tag = m[0];
+    const clip = tag.match(/clip-path="url\(#z\d+c(\d+)\)"/);
+    const d = tag.match(/\sd="([^"]+)"/);
+    if (!clip || !d) continue;
+    const points = [];
+    for (const p of d[1].matchAll(/[ML]\s*([-\d.]+)[ ,]+([-\d.]+)/g)) {
+      points.push([Number(p[1]), Number(p[2])]);
+    }
+    if (points.length) medians.push({ n: Number(clip[1]), points });
+  }
+
+  strokes.sort((a, b) => a.n - b.n);
+  medians.sort((a, b) => a.n - b.n);
+  if (!strokes.length || strokes.length !== medians.length) {
+    throw new Error('animCJK stroke/median mismatch: ' + strokes.length + '/' + medians.length);
+  }
+  return {
+    strokes: strokes.map((s) => s.d),
+    medians: medians.map((m) => m.points),
+  };
+}
+
 function appCharacters() {
   const ctx = { window: {} };
   vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'), ctx);
@@ -114,11 +153,18 @@ const jpDir = unpackTgz(jpTgz, path.join(TMP, 'jp'));
 const hwdFiles = walkJson(hwdDir);
 const jpFiles = walkJson(jpDir);
 const graphics = loadGraphics(graphicsFile);
-log('source data: hwd=' + hwdFiles.size + ', jp=' + jpFiles.size + ', makemeahanzi=' + graphics.size);
+
+const animcjkFiles = new Map();
+for (const [ch, url] of Object.entries(ANIMCJK_FILES)) {
+  const file = await download(url, path.join(TMP, 'animcjk-' + ch.codePointAt(0) + '.svg'));
+  animcjkFiles.set(ch, parseAnimCjkSvg(fs.readFileSync(file, 'utf8')));
+}
+log('source data: hwd=' + hwdFiles.size + ', jp=' + jpFiles.size +
+  ', makemeahanzi=' + graphics.size + ', animcjk=' + animcjkFiles.size);
 
 const result = {};
 const missing = [];
-const from = { hwd: 0, makemeahanzi: 0, jp: 0 };
+const from = { hwd: 0, makemeahanzi: 0, jp: 0, animcjk: 0 };
 
 for (const ch of chars) {
   let data = null;
@@ -135,6 +181,10 @@ for (const ch of chars) {
     data = loadCharacter(jpFiles.get(ch));
     source = 'jp';
   }
+  if (!data && animcjkFiles.has(ch)) {
+    data = animcjkFiles.get(ch);
+    source = 'animcjk';
+  }
   if (data) {
     result[ch] = data;
     from[source] += 1;
@@ -146,7 +196,8 @@ for (const ch of chars) {
 const body = JSON.stringify(result);
 fs.writeFileSync(OUT,
   '/* 자동 생성 파일 — build/make-stroke-data.mjs 로 재생성. 직접 수정 금지 */\n' +
-  '/* 데이터 출처: hanzi-writer-data / Make Me a Hanzi / hanzi-writer-data-jp (ARPHICPL, licenses/) */\n' +
+  '/* 데이터 출처: hanzi-writer-data / Make Me a Hanzi / hanzi-writer-data-jp / animCJK (ARPHICPL, licenses/) */\n' +
+  '/* animCJK SVG는 Hanzi Writer 형식으로 변환되었습니다. */\n' +
   'window.STROKE_DATA = ' + body + ';\n', 'utf8');
 
 log('wrote ' + OUT + ' (' + (fs.statSync(OUT).size / 1024 / 1024).toFixed(2) + ' MB)');
