@@ -46,7 +46,11 @@
       </div>
 
       <div class="deckbar">
-        <span id="card-progress-text">0 / 0</span>
+        <form class="card-jump" id="card-jump-form" autocomplete="off" novalidate>
+          <input type="number" id="card-jump" inputmode="numeric" min="1" value="0"
+            enterkeyhint="go" aria-label="이동할 순번 입력" title="순번을 입력하고 Enter" />
+          <span id="card-progress-total">/ 0</span>
+        </form>
         <label class="switch">
           <input type="checkbox" id="card-shuffle" />
           <span>섞기</span>

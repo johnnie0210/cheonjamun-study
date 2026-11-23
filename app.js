@@ -401,7 +401,7 @@
       $('card-back-meaning').textContent = '';
       $('card-back-chars').innerHTML = '';
       $('btn-stroke').disabled = true;
-      $('card-progress-text').textContent = '0 / 0';
+      setCardProgress(0, 0);
       $('card-progress-fill').style.width = '0%';
       return;
     }
@@ -435,7 +435,7 @@
       }).join('');
     }
 
-    $('card-progress-text').textContent = (cardIndex + 1) + ' / ' + cardList.length;
+    setCardProgress(cardIndex + 1, cardList.length);
     const pct = cardList.length ? ((cardIndex + 1) / cardList.length * 100) : 0;
     $('card-progress-fill').style.width = pct + '%';
     updateKnownStat();
@@ -462,6 +462,41 @@
     cardIndex = (cardIndex - 1 + cardList.length) % cardList.length;
     showCard();
   }
+  // 순번 표시 (입력칸 + 전체 개수)
+  function setCardProgress(pos, total) {
+    const input = $('card-jump');
+    input.value = pos;
+    input.max = total;
+    input.disabled = !total;
+    $('card-progress-total').textContent = '/ ' + total;
+  }
+  // 입력한 순번으로 이동 (현재 표시 중인 목록 기준, 섞기 상태면 섞인 순서 기준)
+  function jumpToCard() {
+    const input = $('card-jump');
+    if (!cardList.length) return;
+    const n = Number(input.value);
+    if (!Number.isInteger(n) || n < 1 || n > cardList.length) {
+      toast('1 ~ ' + cardList.length + ' 사이의 순번을 입력하세요.');
+      input.value = cardIndex + 1;
+      return;
+    }
+    if (n - 1 !== cardIndex) {
+      cardIndex = n - 1;
+      showCard();
+    }
+  }
+  $('card-jump-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    jumpToCard();
+    $('card-jump').blur();
+  });
+  // 입력 후 Enter 없이 다른 곳을 눌러도 이동, 빈 값이면 원래 순번으로 복구
+  $('card-jump').addEventListener('change', () => {
+    if ($('card-jump').value === '') { $('card-jump').value = cardIndex + 1; return; }
+    jumpToCard();
+  });
+  $('card-jump').addEventListener('focus', (e) => e.target.select());
+
   function updateKnownStat() {
     const known = cardList.filter((c) => stats.viewed[c.key]).length;
     $('card-known-count').textContent = cardList.length

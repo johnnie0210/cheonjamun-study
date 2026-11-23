@@ -103,6 +103,16 @@ body { overscroll-behavior-y: none; }
   display: flex; align-items: center; justify-content: space-between;
   font-size: 12.5px; color: var(--ink-soft); margin: 2px 2px 10px;
 }
+/* 순번 입력: 숫자를 입력하고 Enter 하면 해당 순번으로 이동 */
+.card-jump { display: flex; align-items: center; gap: 4px; margin: 0; }
+.card-jump input {
+  width: 5.5ch; padding: 3px 4px; border: 1px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--ink); font: inherit; font-weight: 700; text-align: right;
+  outline: none; -moz-appearance: textfield; appearance: textfield;
+}
+.card-jump input::-webkit-outer-spin-button,
+.card-jump input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.card-jump input:focus { border-color: var(--brand); }
 .switch { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
 .switch input { width: 17px; height: 17px; accent-color: var(--brand); }
 
